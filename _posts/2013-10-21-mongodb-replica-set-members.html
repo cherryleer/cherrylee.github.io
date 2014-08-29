@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MongoDB Replica Sets
+title: MongoDB Replica Set Members
 ---
 
 <article id="post__content">
@@ -27,17 +27,20 @@ title: MongoDB Replica Sets
     <p></p>一些从节点的特殊配置：
     <ul>
         <li>
-            1.在选举中禁止其成为主节点。 设置其priority为0.
+            在选举中禁止其成为主节点。 设置其priority为0.
         </li>
         <li>
-            2.禁止应用进行读操作。
+            禁止应用进行读操作。
         </li>
         <li>
-            3.维护一个运行的历史快照，以便从特定的错误中恢复。
+            维护一个运行的历史快照，以便从特定的错误中恢复。
         </li>
     </ul>
 
     <h3>Arbiter</h3>
     <p>仲裁节点不复制数据，也不能成为主节点。但是仲裁节点能够在选举中投票。仲裁节点能够使一个复制集保持奇数个节点而无需从节点复制数据的开销。</p>
     <p>只有在需要保持奇数个节点的情况下才新增一个仲裁节点。如果新增仲裁节点后使得复制集拥有偶数个节点，复制集也许会陷入无尽的投票中。</p>
+
+    <P>More:</P>
+    <p><a href="http://docs.mongodb.org/manual/core/replica-set-members">http://docs.mongodb.org/manual/core/replica-set-members</a></p>
 </article> <!-- end #post__content -->

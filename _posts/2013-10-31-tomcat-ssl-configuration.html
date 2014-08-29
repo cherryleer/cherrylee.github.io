@@ -1,42 +1,44 @@
 ---
 layout: post
-title: tomcat ssl configuration
+title: Tomcat SSL Configuration
 ---
 
 <article id="post__content">
-    <h1 id="post__title">Tomcat SSL Configuration</h1>
-    <img src="" alt="" style="border: 0pt none;" />
     <h3>1.Prepare the Certificate Keystore</h3>
-    <p>    Too create a new keystore from scratch, containing a single self-signed Certificate, execute the following from a terminal command line:</p>
+    <p>   Too create a new keystore from scratch, containing a single self-signed Certificate, execute the following from a terminal command line:</p>
 
-    <p>    %JAVA_HOME%\bin\keytool -genkey -alias tomcat -keyalg RSA</p>
+    <code>   %JAVA_HOME%\bin\keytool -genkey -alias tomcat -keyalg RSA</code>
 
-    <p>    After executing this command, you will first be prompted for the keystore password. The default password used by Tomcat is "changeit" (all lower case), although you can specify a custom password if you like. You will also need to specify the custom password in theserver.xml configuration file, as described later.</p>
+    <p>   After executing this command, you will first be prompted for the keystore password. The default password used by Tomcat is "changeit" (all lower case), although you can specify a custom password if you like. You will also need to specify the custom password in theserver.xml configuration file, as described later.</p>
 
     <p>   Next, you will be prompted for general information about this Certificate, such as company, contact name, and so on. This information will be displayed to users who attempt to access a secure page in your application, so make sure that the information provided here matches what they will expect.</p>
 
     <p>   Finally, you will be prompted for the key password, which is the password specifically for this Certificate (as opposed to any other Certificates stored in the same keystore file). The keytool prompt will tell you that pressing the ENTER key automatically uses the same password for the key as the keystore. You are free to use the same password or to select a custom one. If you select a different password to the keystore password, you will also need to specify the custom password in the server.xml configuration file.</p>
 
+    <img src="/assets/gen_keystore.png" alt="" style="border: 0pt none;" />
 
+    <p>  If everything goes well, you now have a keystore file with a Certificate that can be used by your server.</p>
 
-
-    <p>  If everything was successful, you now have a keystore file with a Certificate that can be used by your server.</p>
-
-
-
+    <img src="/assets/keystore_location.png" alt="" style="border: 0pt none;" />
 
     <h3>   2.Edit the tomcat configuration file</h3>
     <p>   Configure the Connector in the $CATALINA_BASE/conf/server.xml file, where $CATALINA_BASE represents the base directory for the Tomcat instance.</p>
 
+    <img src="/assets/ssl_tomcat_config.png" alt="" style="border: 0pt none;" />
 
     <h3>   3.Test</h3>
     <p>   After completing the configuration changes, you must restart Tomcat as you normally do, and you should be in business. You should be able to access any web application supported by Tomcat via SSL,. For example, try:
-        https://localhost:8443</p>
+        <a href="https://localhost:8443">https://localhost:8443</a>></p>
     <p>   And you should see the usual Tomcat splash page (unless you have modified the ROOT web application).</p>
 
-
-
+    <img src="/assets/ssl_tomcat_test.png" alt="" style="border: 0pt none;" />
 
     <h3>  4.Edit the application configuration file</h3>
     <p>  Configure the web.xml of the application. Add new configuration as follows:</p>
+
+    <img src="/assets/ssl_application_config.png" alt="" style="border: 0pt none;" />
+
+    <P>For more details, please see:</P>
+    <p><a href="http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html">http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html</a></p>
+
 </article> <!-- end #post__content -->

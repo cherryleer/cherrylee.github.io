@@ -19,24 +19,24 @@ title: Tomcat SSL Configuration
 
     <p>  If everything goes well, you now have a keystore file with a Certificate that can be used by your server.</p>
 
-    <img src="/assets/img/keystore_location.png" alt="" style="border: 0pt none;" />
+    <img src="/assets/img/keystore_location.png" alt="" align="center" style="border: 0pt none;" />
 
     <h3>   2.Edit the tomcat configuration file</h3>
     <p>   Configure the <code>Connector</code> in the <code>$CATALINA_BASE/conf/server.xml</code> file, where <code>$CATALINA_BASE</code>represents the base directory for the Tomcat instance.</p>
 
-    <img src="/assets/img/ssl_tomcat_config.png" alt="" style="border: 0pt none;" />
+    <img src="/assets/img/ssl_tomcat_config.png" alt="" align="center" style="border: 0pt none;" />
 
     <h3>   3.Test</h3>
     <p>   After completing the configuration changes, you must restart Tomcat as you normally do, and you should be in business. You should be able to access any web application supported by Tomcat via SSL,. For example, try:
         <a href="https://localhost:8443">https://localhost:8443</a></p>
     <p>   And you should see the usual Tomcat splash page (unless you have modified the ROOT web application).</p>
 
-    <img src="/assets/img/ssl_tomcat_test.png" alt="" style="border: 0pt none;" />
+    <img src="/assets/img/ssl_tomcat_test.png" alt="" align="center" style="border: 0pt none;" />
 
     <h3>  4.Edit the application configuration file</h3>
     <p>  Configure the web.xml of the application. Add new configuration as follows:</p>
 
-    <img src="/assets/img/ssl_application_config.png" alt="" style="border: 0pt none;" />
+    <img src="/assets/img/ssl_application_config.png" alt="" align="center" style="border: 0pt none;" />
 
     <P>For more details, please see:</P>
     <p><a href="http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html">http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html</a></p>

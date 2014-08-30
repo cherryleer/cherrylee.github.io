@@ -12,11 +12,11 @@ if ($(window).width() <= 1280) {
 
 // Variables
     tag1       = $('.pl__all'),
-    tag2       = $('.1'),
-    tag3       = $('.2'),
-    tag4       = $('.3'),
-    tag5       = $('.4'),
-    tag6       = $('.5');
+    tag2       = $('.translation'),
+    tag3       = $('.programming'),
+    tag4       = $('.data');
+//    tag5       = $('.4'),
+//    tag6       = $('.5');
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
     content    = $('#pjax'),
@@ -30,7 +30,7 @@ var clickHandler = function(k) {
     window['tag'+k].delay(50).fadeIn(350);
   }
 };
-for (var i = 1; i <= 6; i++) {
+for (var i = 1; i <= 4; i++) {
   $('#js-label' + i).on('click', clickHandler(i));
 }
 

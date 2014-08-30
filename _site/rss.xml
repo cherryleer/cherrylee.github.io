@@ -6,31 +6,20 @@
     <atom:link href="cherrylee.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <description>cherry's blog</description>
     <language>env</language>
-    <pubDate>Sat, 30 Aug 2014 09:54:06 +0800</pubDate>
-    <lastBuildDate>Sat, 30 Aug 2014 09:54:06 +0800</lastBuildDate>
+    <pubDate>Sat, 30 Aug 2014 10:53:21 +0800</pubDate>
+    <lastBuildDate>Sat, 30 Aug 2014 10:53:21 +0800</lastBuildDate>
 
-    
-    <item>
-      <title>About Me</title>
-      <link>cherrylee.github.io/9999/01/01/about-me.html</link>
-      <pubDate>01 Jan 9999</pubDate>
-      <author>cherrylee</author>
-      <guid>cherrylee.github.io/9999/01/01/about-me</guid>
-      <description>&lt;article id=&quot;post__content&quot;&gt;
-    &lt;h2&gt;Cherry Lee : Coder Monkey&lt;/h2&gt;
-&lt;/article&gt; &lt;!-- end #post__content --&gt;</description>
-    </item>
     
     <item>
       <title>Tomcat SSL Configuration</title>
-      <link>cherrylee.github.io/2013/10/31/tomcat-ssl-configuration.html</link>
+      <link>cherrylee.github.io/programming/2013/10/31/tomcat-ssl-configuration.html</link>
       <pubDate>31 Oct 2013</pubDate>
       <author>cherrylee</author>
-      <guid>cherrylee.github.io/2013/10/31/tomcat-ssl-configuration</guid>
+      <guid>cherrylee.github.io/programming/2013/10/31/tomcat-ssl-configuration</guid>
       <description>&lt;article id=&quot;post__content&quot;&gt;
     &lt;h3&gt;1.Prepare the Certificate Keystore&lt;/h3&gt;
 
-    &lt;p&gt; Too create a new keystore from scratch, containing a single self-signed Certificate, execute the following from
+    &lt;p&gt; To create a new keystore from scratch, containing a single self-signed Certificate, execute the following from
         a terminal command line:&lt;/p&gt;
 
     &lt;code&gt; %JAVA_HOME%\bin\keytool -genkey -alias tomcat -keyalg RSA&lt;/code&gt;
@@ -92,10 +81,10 @@
     
     <item>
       <title>MongoDB Replica Set Members</title>
-      <link>cherrylee.github.io/2013/10/21/mongodb-replica-set-members.html</link>
+      <link>cherrylee.github.io/translation/2013/10/21/mongodb-replica-set-members.html</link>
       <pubDate>21 Oct 2013</pubDate>
       <author>cherrylee</author>
-      <guid>cherrylee.github.io/2013/10/21/mongodb-replica-set-members</guid>
+      <guid>cherrylee.github.io/translation/2013/10/21/mongodb-replica-set-members</guid>
       <description>&lt;article id=&quot;post__content&quot;&gt;
     &lt;p&gt;MongoDB复制集是一个提供了冗余性和高可用性的mongod进程的集合，各进程主要分为两种角色：主节点（Primary）和从节点（Secondary）。&lt;/p&gt;
 

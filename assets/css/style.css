@@ -1244,3 +1244,12 @@ pre > code {
   color: #2aa198; }
 
 /* Literal.Number.Integer.Long */
+
+
+/* added by cherry @2014-08-30 09:26:30 */
+.img_box {
+   width:100%;
+   overflow:hidden;
+   position:relative;}
+.img_box img{
+   position:relative;}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!--[if lte IE 9]><meta http-equiv="refresh" content="0;url=/ie.html"><![endif]-->
+
+    <title>Tomcat SSL Configuration</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  </head>
+  <body>
+    <aside id="sidebar">
+      <nav id="tags">
+        <a href="/index.html" id="avatar"></a>
+
+        <ul id="tags__ul">
+          <li id="js-label1" class="tags__li tags-btn active">All Posts</li>
+          <li id="js-label2" class="tags__li tags-btn">Translation</li>
+          <li id="js-label3" class="tags__li tags-btn">Programming</li>
+          <li id="js-label4" class="tags__li tags-btn">Data</li>
+          <li id="js-label5" class="tags__li tags-btn">Issue</li>
+          <li id="js-label6" class="tags__li tags-btn">5</li>
+        </ul>
+
+        <div id="tags__bottom">
+          <a href="mailto:cherryleer@gmail.com" id="icon-email" class="tags-btn fontello"></a>
+          <a href="/rss.xml" id="icon-feed" class="tags-btn fontello"></a>
+        </div>
+      </nav> <!-- end #tags -->
+
+      <div id="posts-list">
+        <form action="" id="search-form">
+          <a href="/index.html" id="mobile-avatar"></a>
+          <!-- NOTE: input field is disabled by default -->
+          <input id="search-input" type="text" placeholder="Search..." disabled >
+        </form>
+
+        <nav id="pl__container">
+        
+          <a class=" pl__all" href="/9999/01/01/about-me.html"><span class="pl__circle"></span><span class="pl__title">About Me</span><span class="pl__date">Jan 9999</span></a>
+        
+          <a class=" pl__all" href="/2013/10/31/tomcat-ssl-configuration.html"><span class="pl__circle"></span><span class="pl__title">Tomcat SSL Configuration</span><span class="pl__date">Oct 2013</span></a>
+        
+          <a class=" pl__all" href="/2013/10/21/mongodb-replica-set-members.html"><span class="pl__circle"></span><span class="pl__title">MongoDB Replica Set Members</span><span class="pl__date">Oct 2013</span></a>
+        
+        </nav>
+      </div> <!-- end #posts-list -->
+    </aside> <!-- end #sidebar -->
+
+    <div id="post">
+      <div id="pjax">
+        <article id="post__content">
+  <h1 id="post__title" data-identifier="20131031">Tomcat SSL Configuration</h1>
+  <article id="post__content">
+    <h3>1.Prepare the Certificate Keystore</h3>
+
+    <p> Too create a new keystore from scratch, containing a single self-signed Certificate, execute the following from
+        a terminal command line:</p>
+
+    <code> %JAVA_HOME%\bin\keytool -genkey -alias tomcat -keyalg RSA</code>
+
+    <p> After executing this command, you will first be prompted for the keystore password. The default password used by
+        Tomcat is "changeit" (all lower case), although you can specify a custom password if you like. You will also
+        need to specify the custom password in theserver.xml configuration file, as described later.</p>
+
+    <p> Next, you will be prompted for general information about this Certificate, such as company, contact name, and so
+        on. This information will be displayed to users who attempt to access a secure page in your application, so make
+        sure that the information provided here matches what they will expect.</p>
+
+    <p> Finally, you will be prompted for the key password, which is the password specifically for this Certificate (as
+        opposed to any other Certificates stored in the same keystore file). The keytool prompt will tell you that
+        pressing the ENTER key automatically uses the same password for the key as the keystore. You are free to use the
+        same password or to select a custom one. If you select a different password to the keystore password, you will
+        also need to specify the custom password in the server.xml configuration file.</p>
+
+    <div class="img_box"><img src="/assets/img/gen_keystore.png" alt="" style="border: 0pt none;"/></div>
+
+    <p> If everything goes well, you now have a keystore file with a Certificate that can be used by your server.</p>
+
+    <div class="img_box"><img src="/assets/img/keystore_location.png" alt="" align="center" style="border: 0pt none;"/>
+    </div>
+
+    <h3> 2.Edit the tomcat configuration file</h3>
+
+    <p> Configure the <code>Connector</code> in the <code>$CATALINA_BASE/conf/server.xml</code> file, where <code>$CATALINA_BASE</code>represents
+        the base directory for the Tomcat instance.</p>
+
+    <div class="img_box"><img src="/assets/img/ssl_tomcat_config.png" alt="" align="center" style="border: 0pt none;"/>
+    </div>
+
+    <h3> 3.Test</h3>
+
+    <p> After completing the configuration changes, you must restart Tomcat as you normally do, and you should be in
+        business. You should be able to access any web application supported by Tomcat via SSL,. For example, try:
+        <a href="https://localhost:8443">https://localhost:8443</a></p>
+
+    <p> And you should see the usual Tomcat splash page (unless you have modified the ROOT web application).</p>
+
+    <div class="img_box"><img src="/assets/img/ssl_tomcat_test.png" alt="" align="center" style="border: 0pt none;"/>
+    </div>
+
+    <h3> 4.Edit the application configuration file</h3>
+
+    <p> Configure the web.xml of the application. Add new configuration as follows:</p>
+
+    <div class="img_box"><img src="/assets/img/ssl_application_config.png" alt="" align="center"
+                              style="border: 0pt none;"/></div>
+
+    <P>For more details, please see:</P>
+
+    <p><a href="http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html">http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html</a>
+    </p>
+
+</article> <!-- end #post__content -->
+</article> <!-- end #post__content -->
+
+<div id="post__share">
+  <a id="icon-twitter" class="fontello" href="https://twitter.com/intent/tweet?url=cherrylee.github.io./2013/10/31/tomcat-ssl-configuration.html&text=Tomcat SSL Configuration" target="_blank"></a>
+  <a id="icon-cc" class="fontello" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=cherrylee.github.io./2013/10/31/tomcat-ssl-configuration.html&text=Tomcat SSL Configuration" target="_blank"></a>
+  <a id="icon-weibo" class="fontello" href="http://v.t.sina.com.cn/share/share.php?url=cherrylee.github.io./2013/10/31/tomcat-ssl-configuration.html&title=Tomcat SSL Configuration" target="_blank"></a>
+</div> <!-- end #post__share -->
+
+<div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="mailto:cherryleer@gmail.com" class="dsq-brlink" target="_blank">Any questions, pls contact me...</a>
+</div> <!-- end #disqus_thread -->
+
+<p id="copyright">Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>&nbsp;&nbsp;|&nbsp;&nbsp;Github <a href="https://github.com/cherrylee/cherrylee.github.io" target="_blank">Cherrylee</a></p>
+      </div> <!-- end #pjax -->
+
+      <div id="post__toc-trigger">
+        <div id="post__toc">
+          <span id="post__toc-title">Table of Contents</span>
+          <ul id="post__toc-ul"></ul>
+        </div>
+      </div>
+    </div> <!-- end #post -->
+
+    <button id="js-fullscreen"><span id="icon-arrow" class="fontello"></span></button>
+
+    <script src="/assets/js/jquery-2.0.3.min.js"></script>
+    <script src="/assets/js/jquery.pjax.js"></script>
+    <script src="/assets/js/nprogress.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

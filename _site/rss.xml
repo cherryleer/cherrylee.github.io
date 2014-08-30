@@ -6,18 +6,150 @@
     <atom:link href="cherrylee.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <description>cherry's blog</description>
     <language>env</language>
-    <pubDate>Mon, 25 Aug 2014 23:23:22 +0800</pubDate>
-    <lastBuildDate>Mon, 25 Aug 2014 23:23:22 +0800</lastBuildDate>
+    <pubDate>Sat, 30 Aug 2014 09:54:06 +0800</pubDate>
+    <lastBuildDate>Sat, 30 Aug 2014 09:54:06 +0800</lastBuildDate>
 
     
     <item>
-      <title>virgin</title>
-      <link>cherrylee.github.io/2014/08/24/virgin.html</link>
-      <pubDate>24 Aug 2014</pubDate>
+      <title>About Me</title>
+      <link>cherrylee.github.io/9999/01/01/about-me.html</link>
+      <pubDate>01 Jan 9999</pubDate>
       <author>cherrylee</author>
-      <guid>cherrylee.github.io/2014/08/24/virgin</guid>
+      <guid>cherrylee.github.io/9999/01/01/about-me</guid>
       <description>&lt;article id=&quot;post__content&quot;&gt;
-    &lt;h1 id=&quot;post__title&quot;&gt;It&#39;s my first.&lt;/h1&gt;
+    &lt;h2&gt;Cherry Lee : Coder Monkey&lt;/h2&gt;
+&lt;/article&gt; &lt;!-- end #post__content --&gt;</description>
+    </item>
+    
+    <item>
+      <title>Tomcat SSL Configuration</title>
+      <link>cherrylee.github.io/2013/10/31/tomcat-ssl-configuration.html</link>
+      <pubDate>31 Oct 2013</pubDate>
+      <author>cherrylee</author>
+      <guid>cherrylee.github.io/2013/10/31/tomcat-ssl-configuration</guid>
+      <description>&lt;article id=&quot;post__content&quot;&gt;
+    &lt;h3&gt;1.Prepare the Certificate Keystore&lt;/h3&gt;
+
+    &lt;p&gt; Too create a new keystore from scratch, containing a single self-signed Certificate, execute the following from
+        a terminal command line:&lt;/p&gt;
+
+    &lt;code&gt; %JAVA_HOME%\bin\keytool -genkey -alias tomcat -keyalg RSA&lt;/code&gt;
+
+    &lt;p&gt; After executing this command, you will first be prompted for the keystore password. The default password used by
+        Tomcat is &quot;changeit&quot; (all lower case), although you can specify a custom password if you like. You will also
+        need to specify the custom password in theserver.xml configuration file, as described later.&lt;/p&gt;
+
+    &lt;p&gt; Next, you will be prompted for general information about this Certificate, such as company, contact name, and so
+        on. This information will be displayed to users who attempt to access a secure page in your application, so make
+        sure that the information provided here matches what they will expect.&lt;/p&gt;
+
+    &lt;p&gt; Finally, you will be prompted for the key password, which is the password specifically for this Certificate (as
+        opposed to any other Certificates stored in the same keystore file). The keytool prompt will tell you that
+        pressing the ENTER key automatically uses the same password for the key as the keystore. You are free to use the
+        same password or to select a custom one. If you select a different password to the keystore password, you will
+        also need to specify the custom password in the server.xml configuration file.&lt;/p&gt;
+
+    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/gen_keystore.png&quot; alt=&quot;&quot; style=&quot;border: 0pt none;&quot;/&gt;&lt;/div&gt;
+
+    &lt;p&gt; If everything goes well, you now have a keystore file with a Certificate that can be used by your server.&lt;/p&gt;
+
+    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/keystore_location.png&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;
+    &lt;/div&gt;
+
+    &lt;h3&gt; 2.Edit the tomcat configuration file&lt;/h3&gt;
+
+    &lt;p&gt; Configure the &lt;code&gt;Connector&lt;/code&gt; in the &lt;code&gt;$CATALINA_BASE/conf/server.xml&lt;/code&gt; file, where &lt;code&gt;$CATALINA_BASE&lt;/code&gt;represents
+        the base directory for the Tomcat instance.&lt;/p&gt;
+
+    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/ssl_tomcat_config.png&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;
+    &lt;/div&gt;
+
+    &lt;h3&gt; 3.Test&lt;/h3&gt;
+
+    &lt;p&gt; After completing the configuration changes, you must restart Tomcat as you normally do, and you should be in
+        business. You should be able to access any web application supported by Tomcat via SSL,. For example, try:
+        &lt;a href=&quot;https://localhost:8443&quot;&gt;https://localhost:8443&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt; And you should see the usual Tomcat splash page (unless you have modified the ROOT web application).&lt;/p&gt;
+
+    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/ssl_tomcat_test.png&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;
+    &lt;/div&gt;
+
+    &lt;h3&gt; 4.Edit the application configuration file&lt;/h3&gt;
+
+    &lt;p&gt; Configure the web.xml of the application. Add new configuration as follows:&lt;/p&gt;
+
+    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/ssl_application_config.png&quot; alt=&quot;&quot; align=&quot;center&quot;
+                              style=&quot;border: 0pt none;&quot;/&gt;&lt;/div&gt;
+
+    &lt;P&gt;For more details, please see:&lt;/P&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html&quot;&gt;http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html&lt;/a&gt;
+    &lt;/p&gt;
+
+&lt;/article&gt; &lt;!-- end #post__content --&gt;</description>
+    </item>
+    
+    <item>
+      <title>MongoDB Replica Set Members</title>
+      <link>cherrylee.github.io/2013/10/21/mongodb-replica-set-members.html</link>
+      <pubDate>21 Oct 2013</pubDate>
+      <author>cherrylee</author>
+      <guid>cherrylee.github.io/2013/10/21/mongodb-replica-set-members</guid>
+      <description>&lt;article id=&quot;post__content&quot;&gt;
+    &lt;p&gt;MongoDB复制集是一个提供了冗余性和高可用性的mongod进程的集合，各进程主要分为两种角色：主节点（Primary）和从节点（Secondary）。&lt;/p&gt;
+
+    &lt;p&gt;主节点接收所有的写操作，从节点通过复制主节点的操作来维护一个与主节点完全一致的数据集。当主节点宕机后，从节点通过选举可以成为主节点。当然，在特殊的情况下，某些从节点也可以被设置成没有投票权或着没有能力成为主节点。&lt;/p&gt;
+
+    &lt;p&gt;你也可以在复制集中维护一个仲裁节点（Arbiter） 。仲裁节点不复制数据，但是当主节点不可用时，仲裁节点可以参加投票。&lt;/p&gt;
+
+    &lt;p&gt;一个复制集最多可以有12个成员，但是每一次只有7个成员可以参加投票。&lt;/p&gt;
+
+    &lt;p&gt;一个最小的复制集需要一个主节点，一个从节点和一个仲裁节点。然而大多在部署的时候会保持3个数据存储集：一个主节点，两个从节点。&lt;/p&gt;
+
+    &lt;h3&gt;Primary&lt;/h3&gt;
+
+    &lt;p&gt;主节点是复制集中唯一能够接收写操作的成员。MongoDB在主节点上执行写操作，并将这些操作记录在主节点的oplog日志中。从节点通过复制主节点的oplog，并将其中的操作应用到它们的数据集中。&lt;/p&gt;
+
+    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/replica_routing.png&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;
+    &lt;/div&gt;
+
+    &lt;p&gt;复制集中的所有节点都能够接收读操作。但在默认的情况下，一个应用只将读操作直接发送到主节点。&lt;/p&gt;
+
+    &lt;p&gt;一个复制集最多只能有一个主节点。如果当前的主节点变得不可用，新一轮的选举将会产生。&lt;/p&gt;
+
+    &lt;h3&gt;Secondaries&lt;/h3&gt;
+
+    &lt;p&gt;一个从节点维护了一份主节点数据集的复制。为了能够复制主节点的数据，从节点将主节点oplog中的操作异步的应用到它自己的数据集中。一个复制集可以有一个或多个从节点。&lt;/p&gt;
+
+    &lt;p&gt;下面的三元复制集中有两个从节点。&lt;/p&gt;
+
+    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/replica_set.jpeg&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;&lt;/div&gt;
+
+    &lt;p&gt;&lt;/p&gt;虽然客户端无法直接向从节点写数据，但是客户端可以读从节点的数据。
+    &lt;p&gt;&lt;/p&gt;一些从节点的特殊配置：
+    &lt;ul&gt;
+        &lt;li&gt;
+            在选举中禁止其成为主节点。 设置其priority为0.
+        &lt;/li&gt;
+        &lt;li&gt;
+            禁止应用进行读操作。
+        &lt;/li&gt;
+        &lt;li&gt;
+            维护一个运行的历史快照，以便从特定的错误中恢复。
+        &lt;/li&gt;
+    &lt;/ul&gt;
+
+    &lt;h3&gt;Arbiter&lt;/h3&gt;
+
+    &lt;p&gt;仲裁节点不复制数据，也不能成为主节点。但是仲裁节点能够在选举中投票。仲裁节点能够使一个复制集保持奇数个节点而无需从节点复制数据的开销。&lt;/p&gt;
+
+    &lt;p&gt;只有在需要保持奇数个节点的情况下才新增一个仲裁节点。如果新增仲裁节点后使得复制集拥有偶数个节点，复制集也许会陷入无尽的投票中。&lt;/p&gt;
+
+    &lt;P&gt;More:&lt;/P&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://docs.mongodb.org/manual/core/replica-set-members&quot;&gt;http://docs.mongodb.org/manual/core/replica-set-members&lt;/a&gt;
+    &lt;/p&gt;
 &lt;/article&gt; &lt;!-- end #post__content --&gt;</description>
     </item>
     

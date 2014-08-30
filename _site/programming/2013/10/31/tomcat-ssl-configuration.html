@@ -41,7 +41,7 @@
         
           <a class="programming pl__all" href="/programming/2013/10/31/tomcat-ssl-configuration.html"><span class="pl__circle"></span><span class="pl__title">Tomcat SSL Configuration</span><span class="pl__date">Oct 2013</span></a>
         
-          <a class="translation pl__all" href="/translation/2013/10/21/mongodb-replica-set-members.html"><span class="pl__circle"></span><span class="pl__title">MongoDB Replica Set Members</span><span class="pl__date">Oct 2013</span></a>
+          <a class="translation data pl__all" href="/translation%20data/2013/10/21/mongodb-replica-set-members.html"><span class="pl__circle"></span><span class="pl__title">MongoDB Replica Set Members</span><span class="pl__date">Oct 2013</span></a>
         
         </nav>
       </div> <!-- end #posts-list -->
@@ -52,7 +52,7 @@
         <article id="post__content">
   <h1 id="post__title" data-identifier="20131031">Tomcat SSL Configuration</h1>
   <article id="post__content">
-    <h3>1.Prepare the Certificate Keystore</h3>
+    <h2>1.Prepare the Certificate Keystore</h2>
 
     <p> To create a new keystore from scratch, containing a single self-signed Certificate, execute the following from
         a terminal command line:</p>
@@ -80,7 +80,7 @@
     <div class="img_box"><img src="/assets/img/keystore_location.png" alt="" align="center" style="border: 0pt none;"/>
     </div>
 
-    <h3> 2.Edit the tomcat configuration file</h3>
+    <h2> 2.Edit the tomcat configuration file</h2>
 
     <p> Configure the <code>Connector</code> in the <code>$CATALINA_BASE/conf/server.xml</code> file, where <code>$CATALINA_BASE</code>represents
         the base directory for the Tomcat instance.</p>
@@ -88,7 +88,7 @@
     <div class="img_box"><img src="/assets/img/ssl_tomcat_config.png" alt="" align="center" style="border: 0pt none;"/>
     </div>
 
-    <h3> 3.Test</h3>
+    <h2> 3.Test</h2>
 
     <p> After completing the configuration changes, you must restart Tomcat as you normally do, and you should be in
         business. You should be able to access any web application supported by Tomcat via SSL,. For example, try:
@@ -99,7 +99,7 @@
     <div class="img_box"><img src="/assets/img/ssl_tomcat_test.png" alt="" align="center" style="border: 0pt none;"/>
     </div>
 
-    <h3> 4.Edit the application configuration file</h3>
+    <h2> 4.Edit the application configuration file</h2>
 
     <p> Configure the web.xml of the application. Add new configuration as follows:</p>
 
@@ -125,7 +125,7 @@
   <a href="mailto:cherryleer@gmail.com" class="dsq-brlink" target="_blank">Any questions, pls contact me...</a>
 </div> <!-- end #disqus_thread -->
 
-<p id="copyright">Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>&nbsp;&nbsp;|&nbsp;&nbsp;Github <a href="https://github.com/cherrylee/cherrylee.github.io" target="_blank">Cherrylee</a></p>
+<p id="copyright">Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>&nbsp;&nbsp;|&nbsp;&nbsp;Github <a href="https://github.com/cherrylee" target="_blank">Cherrylee</a></p>
       </div> <!-- end #pjax -->
 
       <div id="post__toc-trigger">

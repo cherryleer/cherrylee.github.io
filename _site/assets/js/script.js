@@ -19,7 +19,7 @@ if ($(window).width() <= 1280) {
 //    tag6       = $('.5');
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
-    content    = $(</div> <!-- end #disqus_thread -->'#pjax'),
+    content    = $('#pjax'),
     button     = $('#icon-arrow');
 
 // Tags switcher

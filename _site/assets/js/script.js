@@ -134,7 +134,7 @@ function afterPjax() {
   var ds_loaded = false,
       top = $('#disqus_thread').offset().top;
       identifier = $('#post__title').data('identifier');
-  window.disqus_shortname = 'cherrylee.github.io';
+  window.disqus_shortname = 'cherrylee.name';
   window.disqus_identifier = identifier;
 
   function check() {

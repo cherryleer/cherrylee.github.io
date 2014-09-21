@@ -6,16 +6,16 @@
     <atom:link href="cherrylee.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <description>cherry's blog</description>
     <language>env</language>
-    <pubDate>Sun, 21 Sep 2014 23:51:15 +0800</pubDate>
-    <lastBuildDate>Sun, 21 Sep 2014 23:51:15 +0800</lastBuildDate>
+    <pubDate>Mon, 22 Sep 2014 00:07:36 +0800</pubDate>
+    <lastBuildDate>Mon, 22 Sep 2014 00:07:36 +0800</lastBuildDate>
 
     
     <item>
       <title>Consistant Hashing</title>
-      <link>cherrylee.github.io/programming/2014/09/21/consistant-hashing.html</link>
+      <link>cherrylee.github.io/distributed/2014/09/21/consistant-hashing.html</link>
       <pubDate>21 Sep 2014</pubDate>
       <author>cherrylee</author>
-      <guid>cherrylee.github.io/programming/2014/09/21/consistant-hashing</guid>
+      <guid>cherrylee.github.io/distributed/2014/09/21/consistant-hashing</guid>
       <description>&lt;article id=&quot;post__content&quot;&gt;
     &lt;h2&gt;摘要&lt;/h2&gt;
 
@@ -117,6 +117,11 @@
         同时提供一个&lt;a href=&quot;http://www.codeproject.com/Articles/56138/Consistent-hashing&quot;&gt; C语言版本的实现&lt;/a&gt;供参考。
     &lt;/p&gt;
 
+    &lt;P&gt;From:&lt;/P&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://blog.codinglabs.org/articles/consistent-hashing.html&quot;&gt;http://blog.codinglabs.org/articles/consistent-hashing.html&lt;/a&gt;
+    &lt;/p&gt;
+
 &lt;/article&gt; &lt;!-- end #post__content --&gt;</description>
     </item>
     
@@ -148,7 +153,7 @@
         same password or to select a custom one. If you select a different password to the keystore password, you will
         also need to specify the custom password in the server.xml configuration file.&lt;/p&gt;
 
-    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/gen_keystore.png&quot; alt=&quot;&quot; style=&quot;border: 0pt none;&quot;/&gt;&lt;/div&gt;
+    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/gen_keystore.png&quot;/&gt;&lt;/p&gt;
 
     &lt;p&gt; If everything goes well, you now have a keystore file with a Certificate that can be used by your server.&lt;/p&gt;
 
@@ -160,8 +165,7 @@
     &lt;p&gt; Configure the &lt;code&gt;Connector&lt;/code&gt; in the &lt;code&gt;$CATALINA_BASE/conf/server.xml&lt;/code&gt; file, where &lt;code&gt;$CATALINA_BASE&lt;/code&gt;represents
         the base directory for the Tomcat instance.&lt;/p&gt;
 
-    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/ssl_tomcat_config.png&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;
-    &lt;/div&gt;
+    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/ssl_tomcat_config.png&quot;/&gt;&lt;/p&gt;
 
     &lt;h2&gt; 3.Test&lt;/h2&gt;
 
@@ -171,17 +175,15 @@
 
     &lt;p&gt; And you should see the usual Tomcat splash page (unless you have modified the ROOT web application).&lt;/p&gt;
 
-    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/ssl_tomcat_test.png&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;
-    &lt;/div&gt;
+    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/ssl_tomcat_test.png&quot;/&gt;&lt;/p&gt;
 
     &lt;h2&gt; 4.Edit the application configuration file&lt;/h2&gt;
 
     &lt;p&gt; Configure the web.xml of the application. Add new configuration as follows:&lt;/p&gt;
 
-    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/ssl_application_config.png&quot; alt=&quot;&quot; align=&quot;center&quot;
-                              style=&quot;border: 0pt none;&quot;/&gt;&lt;/div&gt;
+    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/ssl_application_config.png&quot;/&gt;&lt;/p&gt;
 
-    &lt;P&gt;For more details, please see:&lt;/P&gt;
+    &lt;P&gt;More:&lt;/P&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html&quot;&gt;http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html&lt;/a&gt;
     &lt;/p&gt;
@@ -191,10 +193,10 @@
     
     <item>
       <title>MongoDB Replica Set Members</title>
-      <link>cherrylee.github.io/translation%20data/2013/10/21/mongodb-replica-set-members.html</link>
+      <link>cherrylee.github.io/translation%20distributed/2013/10/21/mongodb-replica-set-members.html</link>
       <pubDate>21 Oct 2013</pubDate>
       <author>cherrylee</author>
-      <guid>cherrylee.github.io/translation%20data/2013/10/21/mongodb-replica-set-members</guid>
+      <guid>cherrylee.github.io/translation%20distributed/2013/10/21/mongodb-replica-set-members</guid>
       <description>&lt;article id=&quot;post__content&quot;&gt;
     &lt;p&gt;MongoDB复制集是一个提供了冗余性和高可用性的mongod进程的集合，各进程主要分为两种角色：主节点（Primary）和从节点（Secondary）。&lt;/p&gt;
 
@@ -210,8 +212,7 @@
 
     &lt;p&gt;主节点是复制集中唯一能够接收写操作的成员。MongoDB在主节点上执行写操作，并将这些操作记录在主节点的oplog日志中。从节点通过复制主节点的oplog，并将其中的操作应用到它们的数据集中。&lt;/p&gt;
 
-    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/replica_routing.png&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;
-    &lt;/div&gt;
+    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/replica_routing.png&quot;/&gt;&lt;/p&gt;
 
     &lt;p&gt;复制集中的所有节点都能够接收读操作。但在默认的情况下，一个应用只将读操作直接发送到主节点。&lt;/p&gt;
 
@@ -223,7 +224,7 @@
 
     &lt;p&gt;下面的三元复制集中有两个从节点。&lt;/p&gt;
 
-    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/replica_set.jpeg&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;&lt;/div&gt;
+    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/replica_set.jpeg&quot;/&gt;&lt;/p&gt;
 
     &lt;p&gt;&lt;/p&gt;虽然客户端无法直接向从节点写数据，但是客户端可以读从节点的数据。
     &lt;p&gt;&lt;/p&gt;一些从节点的特殊配置：

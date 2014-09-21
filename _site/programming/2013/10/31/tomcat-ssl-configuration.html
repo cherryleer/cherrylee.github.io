@@ -19,7 +19,7 @@
           <li id="js-label1" class="tags__li tags-btn active">All Posts</li>
           <li id="js-label2" class="tags__li tags-btn">Translation</li>
           <li id="js-label3" class="tags__li tags-btn">Programming</li>
-          <li id="js-label4" class="tags__li tags-btn">Data</li>
+          <li id="js-label4" class="tags__li tags-btn">Distributed</li>
           <!--<li id="js-label5" class="tags__li tags-btn">Issue</li>-->
           <!--<li id="js-label6" class="tags__li tags-btn">5</li>-->
         </ul>
@@ -39,11 +39,11 @@
 
         <nav id="pl__container">
         
-          <a class="programming pl__all" href="/programming/2014/09/21/consistant-hashing.html"><span class="pl__circle"></span><span class="pl__title">Consistant Hashing</span><span class="pl__date">Sep 2014</span></a>
+          <a class="distributed pl__all" href="/distributed/2014/09/21/consistant-hashing.html"><span class="pl__circle"></span><span class="pl__title">Consistant Hashing</span><span class="pl__date">Sep 2014</span></a>
         
           <a class="programming pl__all" href="/programming/2013/10/31/tomcat-ssl-configuration.html"><span class="pl__circle"></span><span class="pl__title">Tomcat SSL Configuration</span><span class="pl__date">Oct 2013</span></a>
         
-          <a class="translation data pl__all" href="/translation%20data/2013/10/21/mongodb-replica-set-members.html"><span class="pl__circle"></span><span class="pl__title">MongoDB Replica Set Members</span><span class="pl__date">Oct 2013</span></a>
+          <a class="translation distributed pl__all" href="/translation%20distributed/2013/10/21/mongodb-replica-set-members.html"><span class="pl__circle"></span><span class="pl__title">MongoDB Replica Set Members</span><span class="pl__date">Oct 2013</span></a>
         
         </nav>
       </div> <!-- end #posts-list -->
@@ -75,7 +75,7 @@
         same password or to select a custom one. If you select a different password to the keystore password, you will
         also need to specify the custom password in the server.xml configuration file.</p>
 
-    <div class="img_box"><img src="/assets/img/gen_keystore.png" alt="" style="border: 0pt none;"/></div>
+    <p class="picture"><img alt="" src="/assets/img/gen_keystore.png"/></p>
 
     <p> If everything goes well, you now have a keystore file with a Certificate that can be used by your server.</p>
 
@@ -87,8 +87,7 @@
     <p> Configure the <code>Connector</code> in the <code>$CATALINA_BASE/conf/server.xml</code> file, where <code>$CATALINA_BASE</code>represents
         the base directory for the Tomcat instance.</p>
 
-    <div class="img_box"><img src="/assets/img/ssl_tomcat_config.png" alt="" align="center" style="border: 0pt none;"/>
-    </div>
+    <p class="picture"><img alt="" src="/assets/img/ssl_tomcat_config.png"/></p>
 
     <h2> 3.Test</h2>
 
@@ -98,17 +97,15 @@
 
     <p> And you should see the usual Tomcat splash page (unless you have modified the ROOT web application).</p>
 
-    <div class="img_box"><img src="/assets/img/ssl_tomcat_test.png" alt="" align="center" style="border: 0pt none;"/>
-    </div>
+    <p class="picture"><img alt="" src="/assets/img/ssl_tomcat_test.png"/></p>
 
     <h2> 4.Edit the application configuration file</h2>
 
     <p> Configure the web.xml of the application. Add new configuration as follows:</p>
 
-    <div class="img_box"><img src="/assets/img/ssl_application_config.png" alt="" align="center"
-                              style="border: 0pt none;"/></div>
+    <p class="picture"><img alt="" src="/assets/img/ssl_application_config.png"/></p>
 
-    <P>For more details, please see:</P>
+    <P>More:</P>
 
     <p><a href="http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html">http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html</a>
     </p>

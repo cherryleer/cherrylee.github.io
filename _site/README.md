@@ -1,1 +1,3 @@
-Hello World!
+Hi,
+
+This is Cherry's blog.

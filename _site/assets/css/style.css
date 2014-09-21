@@ -1247,9 +1247,7 @@ pre > code {
 
 
 /* added by cherry @2014-08-30 09:26:30 */
-.img_box {
-   width:100%;
-   overflow:hidden;
-   position:relative;}
-.img_box img{
-   position:relative;}
+
+.picture {
+    text-align: center;
+}

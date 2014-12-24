@@ -65,7 +65,7 @@
 
 <p>主节点是复制集中唯一能够接收写操作的成员。MongoDB在主节点上执行写操作，并将这些操作记录在主节点的oplog日志中。从节点通过复制主节点的oplog，并将其中的操作应用到它们的数据集中。</p>
 
-<p><img src="/assets/img/replica_routing.png" alt="alt text" /></p>
+<p class="picture"><img alt="" src="/assets/img/replica_routing.png" /></p>
 
 <p>复制集中的所有节点都能够接收读操作。但在默认的情况下，一个应用只将读操作直接发送到主节点。</p>
 
@@ -77,7 +77,7 @@
 
 <p>下面的三元复制集中有两个从节点。</p>
 
-<p><img src="/assets/img/replica_set.jpeg" alt="alt text" /></p>
+<p class="picture"><img alt="" src="/assets/img/replica_set.jpeg" /></p>
 
 <p>虽然客户端无法直接向从节点写数据，但是客户端可以读从节点的数据。
 一些从节点的特殊配置：</p>

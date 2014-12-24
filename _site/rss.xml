@@ -41,8 +41,6 @@
         
           <a class="distributed pl__all" href="/distributed/2014/09/21/consistant-hashing.html"><span class="pl__circle"></span><span class="pl__title">Consistant Hashing</span><span class="pl__date">Sep 2014</span></a>
         
-          <a class="programming pl__all" href="/programming/2013/10/31/tomcat-ssl-configuration.html"><span class="pl__circle"></span><span class="pl__title">Tomcat SSL Configuration</span><span class="pl__date">Oct 2013</span></a>
-        
           <a class="translation distributed pl__all" href="/translation%20distributed/2013/10/21/mongodb-replica-set-members.html"><span class="pl__circle"></span><span class="pl__title">MongoDB Replica Set Members</span><span class="pl__date">Oct 2013</span></a>
         
         </nav>
@@ -61,8 +59,8 @@
     <atom:link href="cherrylee.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <description>cherry's blog</description>
     <language>env</language>
-    <pubDate>Wed, 24 Dec 2014 15:43:52 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Dec 2014 15:43:52 +0800</lastBuildDate>
+    <pubDate>Wed, 24 Dec 2014 16:01:09 +0800</pubDate>
+    <lastBuildDate>Wed, 24 Dec 2014 16:01:09 +0800</lastBuildDate>
 
     
     <item>
@@ -175,72 +173,6 @@
     &lt;P&gt;From:&lt;/P&gt;
 
     &lt;p&gt;&lt;a href=&quot;http://blog.codinglabs.org/articles/consistent-hashing.html&quot;&gt;http://blog.codinglabs.org/articles/consistent-hashing.html&lt;/a&gt;
-    &lt;/p&gt;
-
-&lt;/article&gt; &lt;!-- end #post__content --&gt;</description>
-    </item>
-    
-    <item>
-      <title>Tomcat SSL Configuration</title>
-      <link>cherrylee.github.io/programming/2013/10/31/tomcat-ssl-configuration.html</link>
-      <pubDate>31 Oct 2013</pubDate>
-      <author>cherrylee</author>
-      <guid>cherrylee.github.io/programming/2013/10/31/tomcat-ssl-configuration</guid>
-      <description>&lt;article id=&quot;post__content&quot;&gt;
-    &lt;h2&gt;1.Prepare the Certificate Keystore&lt;/h2&gt;
-
-    &lt;p&gt; To create a new keystore from scratch, containing a single self-signed Certificate, execute the following from
-        a terminal command line:&lt;/p&gt;
-
-    &lt;code&gt; %JAVA_HOME%\bin\keytool -genkey -alias tomcat -keyalg RSA&lt;/code&gt;
-
-    &lt;p&gt; After executing this command, you will first be prompted for the keystore password. The default password used by
-        Tomcat is &quot;changeit&quot; (all lower case), although you can specify a custom password if you like. You will also
-        need to specify the custom password in theserver.xml configuration file, as described later.&lt;/p&gt;
-
-    &lt;p&gt; Next, you will be prompted for general information about this Certificate, such as company, contact name, and so
-        on. This information will be displayed to users who attempt to access a secure page in your application, so make
-        sure that the information provided here matches what they will expect.&lt;/p&gt;
-
-    &lt;p&gt; Finally, you will be prompted for the key password, which is the password specifically for this Certificate (as
-        opposed to any other Certificates stored in the same keystore file). The keytool prompt will tell you that
-        pressing the ENTER key automatically uses the same password for the key as the keystore. You are free to use the
-        same password or to select a custom one. If you select a different password to the keystore password, you will
-        also need to specify the custom password in the server.xml configuration file.&lt;/p&gt;
-
-    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/gen_keystore.png&quot;/&gt;&lt;/p&gt;
-
-    &lt;p&gt; If everything goes well, you now have a keystore file with a Certificate that can be used by your server.&lt;/p&gt;
-
-    &lt;div class=&quot;img_box&quot;&gt;&lt;img src=&quot;/assets/img/keystore_location.png&quot; alt=&quot;&quot; align=&quot;center&quot; style=&quot;border: 0pt none;&quot;/&gt;
-    &lt;/div&gt;
-
-    &lt;h2&gt; 2.Edit the tomcat configuration file&lt;/h2&gt;
-
-    &lt;p&gt; Configure the &lt;code&gt;Connector&lt;/code&gt; in the &lt;code&gt;$CATALINA_BASE/conf/server.xml&lt;/code&gt; file, where &lt;code&gt;$CATALINA_BASE&lt;/code&gt;represents
-        the base directory for the Tomcat instance.&lt;/p&gt;
-
-    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/ssl_tomcat_config.png&quot;/&gt;&lt;/p&gt;
-
-    &lt;h2&gt; 3.Test&lt;/h2&gt;
-
-    &lt;p&gt; After completing the configuration changes, you must restart Tomcat as you normally do, and you should be in
-        business. You should be able to access any web application supported by Tomcat via SSL,. For example, try:
-        &lt;a href=&quot;https://localhost:8443&quot;&gt;https://localhost:8443&lt;/a&gt;&lt;/p&gt;
-
-    &lt;p&gt; And you should see the usual Tomcat splash page (unless you have modified the ROOT web application).&lt;/p&gt;
-
-    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/ssl_tomcat_test.png&quot;/&gt;&lt;/p&gt;
-
-    &lt;h2&gt; 4.Edit the application configuration file&lt;/h2&gt;
-
-    &lt;p&gt; Configure the web.xml of the application. Add new configuration as follows:&lt;/p&gt;
-
-    &lt;p class=&quot;picture&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;/assets/img/ssl_application_config.png&quot;/&gt;&lt;/p&gt;
-
-    &lt;P&gt;More:&lt;/P&gt;
-
-    &lt;p&gt;&lt;a href=&quot;http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html&quot;&gt;http://tomcat.apache.org/tomcat-7.0.doc/ssl-howto.html&lt;/a&gt;
     &lt;/p&gt;
 
 &lt;/article&gt; &lt;!-- end #post__content --&gt;</description>

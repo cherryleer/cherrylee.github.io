@@ -1,4 +1,59 @@
-<?xml version="1.0"?>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <!--[if lte IE 9]><meta http-equiv="refresh" content="0;url=/ie.html"><![endif]-->
+
+    <title></title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" href="/assets/css/style.css">
+  </head>
+  <body>
+    <aside id="sidebar">
+      <nav id="tags">
+        <a href="http://cherrylee.name" id="avatar"></a>
+
+        <ul id="tags__ul">
+          <li id="js-label1" class="tags__li tags-btn active">All Posts</li>
+          <li id="js-label2" class="tags__li tags-btn">Translation</li>
+          <li id="js-label3" class="tags__li tags-btn">Programming</li>
+          <li id="js-label4" class="tags__li tags-btn">Distributed</li>
+          <!--<li id="js-label5" class="tags__li tags-btn">Issue</li>-->
+          <!--<li id="js-label6" class="tags__li tags-btn">5</li>-->
+        </ul>
+
+        <div id="tags__bottom">
+          <a href="mailto:cherryleer@gmail.com" id="icon-email" class="tags-btn fontello"></a>
+          <a href="/rss.xml" id="icon-feed" class="tags-btn fontello"></a>
+        </div>
+      </nav> <!-- end #tags -->
+
+      <div id="posts-list">
+        <form action="" id="search-form">
+          <a href="/index.html" id="mobile-avatar"></a>
+          <!-- NOTE: input field is disabled by default -->
+          <input id="search-input" type="text" placeholder="Search..." disabled >
+        </form>
+
+        <nav id="pl__container">
+        
+          <a class="distributed pl__all" href="/distributed/2014/09/21/consistant-hashing.html"><span class="pl__circle"></span><span class="pl__title">Consistant Hashing</span><span class="pl__date">Sep 2014</span></a>
+        
+          <a class="programming pl__all" href="/programming/2013/10/31/tomcat-ssl-configuration.html"><span class="pl__circle"></span><span class="pl__title">Tomcat SSL Configuration</span><span class="pl__date">Oct 2013</span></a>
+        
+          <a class="translation distributed pl__all" href="/translation%20distributed/2013/10/21/mongodb-replica-set-members.html"><span class="pl__circle"></span><span class="pl__title">MongoDB Replica Set Members</span><span class="pl__date">Oct 2013</span></a>
+        
+        </nav>
+      </div> <!-- end #posts-list -->
+    </aside> <!-- end #sidebar -->
+
+    <div id="post">
+      <div id="pjax">
+        <article id="post__content">
+  <h1 id="post__title" data-identifier=""></h1>
+  <?xml version="1.0"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cherrylee</title>
@@ -6,29 +61,9 @@
     <atom:link href="cherrylee.github.io/rss.xml" rel="self" type="application/rss+xml" />
     <description>cherry's blog</description>
     <language>env</language>
-    <pubDate>Wed, 24 Dec 2014 15:13:29 +0800</pubDate>
-    <lastBuildDate>Wed, 24 Dec 2014 15:13:29 +0800</lastBuildDate>
+    <pubDate>Wed, 24 Dec 2014 15:42:51 +0800</pubDate>
+    <lastBuildDate>Wed, 24 Dec 2014 15:42:51 +0800</lastBuildDate>
 
-    
-    <item>
-      <title>MongoDB Replica Set Members</title>
-      <link>cherrylee.github.io/translation%20distributed/2014/12/24/test.html</link>
-      <pubDate>24 Dec 2014</pubDate>
-      <author>cherrylee</author>
-      <guid>cherrylee.github.io/translation%20distributed/2014/12/24/test</guid>
-      <description>&lt;h1 id=&quot;markdown&quot;&gt;Markdown测试&lt;/h1&gt;
-
-&lt;p&gt;&lt;strong&gt;轻量级标记语言&lt;/strong&gt; 是一种 &lt;em&gt;语法简单&lt;/em&gt; 的标记语言。
-它使用易于理解的格式标记，没有古怪的 &lt;code&gt;&amp;lt;标签&amp;gt;&lt;/code&gt; 。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;可以使用最简单的文本编辑器编辑。&lt;/li&gt;
-  &lt;li&gt;所见即所得，非技术控亦可直接阅读源码。&lt;/li&gt;
-  &lt;li&gt;可版本控制。&lt;/li&gt;
-  &lt;li&gt;实现单一源文件出版。&lt;/li&gt;
-&lt;/ul&gt;
-</description>
-    </item>
     
     <item>
       <title>Consistant Hashing</title>
@@ -268,3 +303,35 @@
     
   </channel>
 </rss>
+</article> <!-- end #post__content -->
+
+<div id="post__share">
+  <a id="icon-twitter" class="fontello" href="https://twitter.com/intent/tweet?url=cherrylee.github.io./rss.xml&text=" target="_blank"></a>
+  <a id="icon-cc" class="fontello" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=cherrylee.github.io./rss.xml&text=" target="_blank"></a>
+  <a id="icon-weibo" class="fontello" href="http://v.t.sina.com.cn/share/share.php?url=cherrylee.github.io./rss.xml&title=" target="_blank"></a>
+</div> <!-- end #post__share -->
+
+<div id="disqus_thread">
+  <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  <a href="mailto:cherryleer@gmail.com" class="dsq-brlink" target="_blank">Any questions, pls contact me...</a>
+</div>
+
+<p id="copyright">Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>&nbsp;&nbsp;|&nbsp;&nbsp;Github <a href="https://github.com/cherrylee" target="_blank">Cherrylee</a></p>
+      </div> <!-- end #pjax -->
+
+      <div id="post__toc-trigger">
+        <div id="post__toc">
+          <span id="post__toc-title">Table of Contents</span>
+          <ul id="post__toc-ul"></ul>
+        </div>
+      </div>
+    </div> <!-- end #post -->
+
+    <button id="js-fullscreen"><span id="icon-arrow" class="fontello"></span></button>
+
+    <script src="/assets/js/jquery-2.0.3.min.js"></script>
+    <script src="/assets/js/jquery.pjax.js"></script>
+    <script src="/assets/js/nprogress.js"></script>
+    <script src="/assets/js/script.js"></script>
+  </body>
+</html>

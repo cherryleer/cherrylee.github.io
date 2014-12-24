@@ -39,6 +39,8 @@
 
         <nav id="pl__container">
         
+          <a class="translation distributed pl__all" href="/translation%20distributed/2014/12/24/test.html"><span class="pl__circle"></span><span class="pl__title">MongoDB Replica Set Members</span><span class="pl__date">Dec 2014</span></a>
+        
           <a class="distributed pl__all" href="/distributed/2014/09/21/consistant-hashing.html"><span class="pl__circle"></span><span class="pl__title">Consistant Hashing</span><span class="pl__date">Sep 2014</span></a>
         
           <a class="programming pl__all" href="/programming/2013/10/31/tomcat-ssl-configuration.html"><span class="pl__circle"></span><span class="pl__title">Tomcat SSL Configuration</span><span class="pl__date">Oct 2013</span></a>
@@ -53,60 +55,53 @@
       <div id="pjax">
         <article id="post__content">
   <h1 id="post__title" data-identifier="20131021">MongoDB Replica Set Members</h1>
-  <article id="post__content">
-    <p>MongoDB复制集是一个提供了冗余性和高可用性的mongod进程的集合，各进程主要分为两种角色：主节点（Primary）和从节点（Secondary）。</p>
+  <p>MongoDB复制集是一个提供了冗余性和高可用性的mongod进程的集合，各进程主要分为两种角色：主节点（Primary）和从节点（Secondary）。</p>
 
-    <p>主节点接收所有的写操作，从节点通过复制主节点的操作来维护一个与主节点完全一致的数据集。当主节点宕机后，从节点通过选举可以成为主节点。当然，在特殊的情况下，某些从节点也可以被设置成没有投票权或着没有能力成为主节点。</p>
+<p>主节点接收所有的写操作，从节点通过复制主节点的操作来维护一个与主节点完全一致的数据集。当主节点宕机后，从节点通过选举可以成为主节点。当然，在特殊的情况下，某些从节点也可以被设置成没有投票权或着没有能力成为主节点。</p>
 
-    <p>你也可以在复制集中维护一个仲裁节点（Arbiter） 。仲裁节点不复制数据，但是当主节点不可用时，仲裁节点可以参加投票。</p>
+<p>你也可以在复制集中维护一个仲裁节点（Arbiter） 。仲裁节点不复制数据，但是当主节点不可用时，仲裁节点可以参加投票。</p>
 
-    <p>一个复制集最多可以有12个成员，但是每一次只有7个成员可以参加投票。</p>
+<p>一个复制集最多可以有12个成员，但是每一次只有7个成员可以参加投票。</p>
 
-    <p>一个最小的复制集需要一个主节点，一个从节点和一个仲裁节点。然而大多在部署的时候会保持3个数据存储集：一个主节点，两个从节点。</p>
+<p>一个最小的复制集需要一个主节点，一个从节点和一个仲裁节点。然而大多在部署的时候会保持3个数据存储集：一个主节点，两个从节点。</p>
 
-    <h2>Primary</h2>
+<h2 id="primary">Primary</h2>
 
-    <p>主节点是复制集中唯一能够接收写操作的成员。MongoDB在主节点上执行写操作，并将这些操作记录在主节点的oplog日志中。从节点通过复制主节点的oplog，并将其中的操作应用到它们的数据集中。</p>
+<p>主节点是复制集中唯一能够接收写操作的成员。MongoDB在主节点上执行写操作，并将这些操作记录在主节点的oplog日志中。从节点通过复制主节点的oplog，并将其中的操作应用到它们的数据集中。</p>
 
-    <p class="picture"><img alt="" src="/assets/img/replica_routing.png"/></p>
+<p><img src="/assets/img/replica_routing.png" alt="alt text" /></p>
 
-    <p>复制集中的所有节点都能够接收读操作。但在默认的情况下，一个应用只将读操作直接发送到主节点。</p>
+<p>复制集中的所有节点都能够接收读操作。但在默认的情况下，一个应用只将读操作直接发送到主节点。</p>
 
-    <p>一个复制集最多只能有一个主节点。如果当前的主节点变得不可用，新一轮的选举将会产生。</p>
+<p>一个复制集最多只能有一个主节点。如果当前的主节点变得不可用，新一轮的选举将会产生。</p>
 
-    <h2>Secondaries</h2>
+<h2 id="secondaries">Secondaries</h2>
 
-    <p>一个从节点维护了一份主节点数据集的复制。为了能够复制主节点的数据，从节点将主节点oplog中的操作异步的应用到它自己的数据集中。一个复制集可以有一个或多个从节点。</p>
+<p>一个从节点维护了一份主节点数据集的复制。为了能够复制主节点的数据，从节点将主节点oplog中的操作异步的应用到它自己的数据集中。一个复制集可以有一个或多个从节点。</p>
 
-    <p>下面的三元复制集中有两个从节点。</p>
+<p>下面的三元复制集中有两个从节点。</p>
 
-    <p class="picture"><img alt="" src="/assets/img/replica_set.jpeg"/></p>
+<p><img src="/assets/img/replica_set.jpeg" alt="alt text" /></p>
 
-    <p></p>虽然客户端无法直接向从节点写数据，但是客户端可以读从节点的数据。
-    <p></p>一些从节点的特殊配置：
-    <ul>
-        <li>
-            在选举中禁止其成为主节点。 设置其priority为0.
-        </li>
-        <li>
-            禁止应用进行读操作。
-        </li>
-        <li>
-            维护一个运行的历史快照，以便从特定的错误中恢复。
-        </li>
-    </ul>
+<p>虽然客户端无法直接向从节点写数据，但是客户端可以读从节点的数据。
+一些从节点的特殊配置：</p>
 
-    <h2>Arbiter</h2>
+<ul>
+  <li>在选举中禁止其成为主节点。 设置其priority为0。</li>
+  <li>禁止应用进行读操作。</li>
+  <li>维护一个运行的历史快照，以便从特定的错误中恢复。</li>
+</ul>
 
-    <p>仲裁节点不复制数据，也不能成为主节点。但是仲裁节点能够在选举中投票。仲裁节点能够使一个复制集保持奇数个节点而无需从节点复制数据的开销。</p>
+<h2 id="arbiter">Arbiter</h2>
 
-    <p>只有在需要保持奇数个节点的情况下才新增一个仲裁节点。如果新增仲裁节点后使得复制集拥有偶数个节点，复制集也许会陷入无尽的投票中。</p>
+<p>仲裁节点不复制数据，也不能成为主节点。但是仲裁节点能够在选举中投票。仲裁节点能够使一个复制集保持奇数个节点而无需从节点复制数据的开销。</p>
 
-    <P>More:</P>
+<p>只有在需要保持奇数个节点的情况下才新增一个仲裁节点。如果新增仲裁节点后使得复制集拥有偶数个节点，复制集也许会陷入无尽的投票中。</p>
 
-    <p><a href="http://docs.mongodb.org/manual/core/replica-set-members">http://docs.mongodb.org/manual/core/replica-set-members</a>
-    </p>
-</article> <!-- end #post__content -->
+<ul>
+  <li>More http://docs.mongodb.org/manual/core/replica-set-members</li>
+</ul>
+
 </article> <!-- end #post__content -->
 
 <div id="post__share">

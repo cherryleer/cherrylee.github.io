@@ -1,3 +1,4 @@
 highlighter: true
 safe: false
 paginate: 10
+disqus_short_name:cherryleename

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MongoDB Replica Set Members
-category: translation distributed
+category: translation nosql
 comments: true
 ---
 

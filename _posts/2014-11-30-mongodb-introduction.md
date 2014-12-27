@@ -5,4 +5,5 @@ category: nosql
 comments: true
 ---
 
-- MongoDB Introduction： <a href="http://pan.baidu.com/s/1o6ibZg2" >下载</a>
+- <a href="http://cherrylee.name/mongodb-introduction" >Presentation</a>
+- <a href="http://pan.baidu.com/s/1o6ibZg2" >Download</a>

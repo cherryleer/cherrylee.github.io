@@ -7,9 +7,9 @@ if ($(window).width() <= 1280) {
     tag1       = $('.pl__all'),
     tag2       = $('.translation'),
     tag3       = $('.programming'),
-    tag4       = $('.nosql');
-//    tag5       = $('.4'),
-//    tag6       = $('.5');
+    tag4       = $('.nosql'),
+    tag100       = $('.me');
+
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
     content    = $('#pjax'),

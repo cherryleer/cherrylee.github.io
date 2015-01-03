@@ -23,7 +23,7 @@ var clickHandler = function(k) {
     window['tag'+k].delay(50).fadeIn(350);
   }
 };
-for (var i = 1; i <= 4; i++) {
+for (var i = 1; i <= 5; i++) {
   $('#js-label' + i).on('click', clickHandler(i));
 }
 
@@ -124,23 +124,23 @@ function afterPjax() {
 
   // Lazy Loading Disqus
   // http://jsfiddle.net/dragoncrew/SHGwe/1/
-  var ds_loaded = false,
-      top = $('#disqus_thread').offset().top;
-      identifier = $('#post__title').data('identifier');
-  window.disqus_shortname = 'cherrylee.name';
-  window.disqus_identifier = identifier;
-
-  function check() {
-    if ( !ds_loaded && container.scrollTop() + container.height() > top ) {
-      $.ajax({
-        type: 'GET',
-        url: 'http://' + disqus_shortname + '.disqus.com/embed.js',
-        dataType: 'script',
-        cache: true
-      });
-      ds_loaded = true;
-    }
-  }check();
-  container.scroll(check);
+//  var ds_loaded = false,
+//      top = $('#disqus_thread').offset().top;
+//      identifier = $('#post__title').data('identifier');
+//  window.disqus_shortname = 'cherrylee.name';
+//  window.disqus_identifier = identifier;
+//
+//  function check() {
+//    if ( !ds_loaded && container.scrollTop() + container.height() > top ) {
+//      $.ajax({
+//        type: 'GET',
+//        url: 'http://' + disqus_shortname + '.disqus.com/embed.js',
+//        dataType: 'script',
+//        cache: true
+//      });
+//      ds_loaded = true;
+//    }
+//  }check();
+//  container.scroll(check);
 }afterPjax();
 

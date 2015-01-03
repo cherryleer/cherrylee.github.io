@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Consistant Hashing
+title: 一致性hash
 category: algorithm
 comments: true
 ---

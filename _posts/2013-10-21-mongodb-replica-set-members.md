@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MongoDB Replica Set Members
+title: MongoDB复制集成员
 category: translation nosql
 comments: true
 ---

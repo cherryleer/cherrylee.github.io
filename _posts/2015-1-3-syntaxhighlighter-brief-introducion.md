@@ -1,6 +1,6 @@
 ---
 layout: post
-title: SyntaxHighlighter Brief Introduction
+title: SyntaxHighlighter简介
 category: javascript
 comments: true
 ---

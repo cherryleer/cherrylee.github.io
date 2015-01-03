@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Synchronization
+title: 同步
 category: translation concurrency
 comments: true
 ---

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MongoDB Introduction
+title: MongoDB介绍
 category: nosql
 comments: true
 ---

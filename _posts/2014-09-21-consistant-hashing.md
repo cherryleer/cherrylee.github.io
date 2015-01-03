@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Consistant Hashing
-category: programming
+category: algorithm
 comments: true
 ---
 

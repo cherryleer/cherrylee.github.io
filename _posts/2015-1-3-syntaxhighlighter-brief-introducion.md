@@ -17,7 +17,7 @@ SyntaxHighlighter是一款由javascript开发，功能强大且独立的代码�
 - 解压。
 - 引入基础文件：shCore.js和shCore.css
 - 引入所需要的格式文件（如需java高亮，则引入shBrushJava.js）
-- 在'<pre />'块中创建代码
+- 在<pre />块中创建代码
 - 调用SyntaxHighlighter.all()方法
 
 ##举个例子

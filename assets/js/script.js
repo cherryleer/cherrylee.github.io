@@ -6,8 +6,9 @@ if ($(window).width() <= 1280) {
 // Variables
     tag1       = $('.pl__all'),
     tag2       = $('.translation'),
-    tag3       = $('.programming'),
-    tag4       = $('.nosql');
+    tag3       = $('.algorithm'),
+    tag4       = $('.concurrency'),
+    tag5       = $('.nosql');
 
 var sidebar    = $('#sidebar'),
     container  = $('#post'),

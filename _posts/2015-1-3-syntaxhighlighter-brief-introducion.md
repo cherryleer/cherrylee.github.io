@@ -12,7 +12,7 @@ SyntaxHighlighter是一款由javascript开发，功能强大且独立的代码�
 如今已被Apache, Aptana, Mozilla, Yahoo, Wordpress, Bug Labs, Freshbooks等使用。
 
 
-##基本步骤
+##步骤
 - <a href="http://alexgorbatchev.com/SyntaxHighlighter/download/">下载地址</a>
 - 解压。
 - 引入基础文件：shCore.js和shCore.css
@@ -20,7 +20,7 @@ SyntaxHighlighter是一款由javascript开发，功能强大且独立的代码�
 - 在<pre />块中创建代码
 - 调用SyntaxHighlighter.all()方法
 
-##举个例子
+##栗子
 - <a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/demo/">Demo</a>
 
 

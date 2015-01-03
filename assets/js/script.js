@@ -9,6 +9,7 @@ if ($(window).width() <= 1280) {
     tag3       = $('.algorithm'),
     tag4       = $('.concurrency'),
     tag5       = $('.nosql');
+    tag6       = $('.javascript');
 
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
@@ -23,7 +24,7 @@ var clickHandler = function(k) {
     window['tag'+k].delay(50).fadeIn(350);
   }
 };
-for (var i = 1; i <= 5; i++) {
+for (var i = 1; i <= 6; i++) {
   $('#js-label' + i).on('click', clickHandler(i));
 }
 

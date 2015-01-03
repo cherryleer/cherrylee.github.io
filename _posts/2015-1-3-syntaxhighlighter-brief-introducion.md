@@ -1,11 +1,9 @@
 ---
 layout: post
-title: SyntaxHighlighter Demo
+title: SyntaxHighlighter Brief Introduction
 category: javascript
 comments: true
 ---
-
-# SyntaxHighlighter
 
 ## 介绍
 - <a href="http://alexgorbatchev.com/SyntaxHighlighter/download/">官网</a>
@@ -22,7 +20,8 @@ SyntaxHighlighter是一款由javascript开发，功能强大且独立的代码�
 - 在'<pre />'块中创建代码
 - 调用SyntaxHighlighter.all()方法
 
-##举个栗子
+##举个例子
+- <a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/installation.html">Demo</a>
 
 
 

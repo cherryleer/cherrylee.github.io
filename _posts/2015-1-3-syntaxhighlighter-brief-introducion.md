@@ -6,7 +6,7 @@ comments: true
 ---
 
 ## 介绍
-- <a href="http://alexgorbatchev.com/SyntaxHighlighter/download/">官网</a>
+- <a href="http://alexgorbatchev.com/SyntaxHighlighter/">官网</a>
 
 SyntaxHighlighter是一款由javascript开发，功能强大且独立的代码语法高亮显示工具。
 如今已被Apache, Aptana, Mozilla, Yahoo, Wordpress, Bug Labs, Freshbooks等使用。
@@ -21,7 +21,7 @@ SyntaxHighlighter是一款由javascript开发，功能强大且独立的代码�
 - 调用SyntaxHighlighter.all()方法
 
 ##举个例子
-- <a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/installation.html">Demo</a>
+- <a href="http://alexgorbatchev.com/SyntaxHighlighter/manual/demo/">Demo</a>
 
 
 

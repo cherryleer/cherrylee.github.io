@@ -9,7 +9,7 @@ if ($(window).width() <= 1280) {
     tag3       = $('.algorithm'),
     tag4       = $('.concurrency'),
     tag5       = $('.nosql');
-    tag6       = $('.javascript');
+    tag6       = $('.front-end');
 
 var sidebar    = $('#sidebar'),
     container  = $('#post'),

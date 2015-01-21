@@ -8,6 +8,7 @@ comments: true
 - <a href="http://jekyllthemes.org/">官网</a>
 
 Disqus是一家第三方社会化评论系统，主要为网站主提供评论托管服务，由Danniel Ha于2007年5月5日创办。
+
 WordPress、Blogger、Tumblr等第三方博客平台均提供了Disqus第三方评论插件，目前，第三方社会化评论系统在美国，基本是主流网站的标配。
 
 ## Step1 申请Disqus账号
@@ -27,6 +28,7 @@ WordPress、Blogger、Tumblr等第三方博客平台均提供了Disqus第三方�
 <p class="picture"><img alt="" src="/assets/img/2013-12-20/add-disqus.jpg"/></p>
 
 输入
+
 - Site name 网站名称
 - Disqus URL（shortname）
 - Category类别

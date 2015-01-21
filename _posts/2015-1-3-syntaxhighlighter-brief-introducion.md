@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SyntaxHighlighter简介
-category: front-end
+category: fun
 comments: true
 ---
 

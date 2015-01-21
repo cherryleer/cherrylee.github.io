@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何为博客添加Disqus评论功能
-category: front-end
+category: fun
 comments: true
 ---
 

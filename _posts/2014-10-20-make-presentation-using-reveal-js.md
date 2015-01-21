@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用reveal.js制作幻灯片
-category: front-end
+category: fun
 comments: true
 ---
 

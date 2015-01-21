@@ -1,7 +1,7 @@
 ---
 layout: post
 title: jekyll theme推荐
-category: front-end
+category: fun
 comments: true
 ---
 

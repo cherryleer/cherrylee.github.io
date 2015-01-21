@@ -10,6 +10,7 @@ if ($(window).width() <= 1280) {
     tag4       = $('.concurrency'),
     tag5       = $('.nosql');
     tag6       = $('.fun');
+    tag7       = $('.life');
 
 var sidebar    = $('#sidebar'),
     container  = $('#post'),

@@ -7,7 +7,7 @@ comments: true
 
 ## 介绍
 
-- <a href="http://jekyllthemes.org/">官网</a>
+<a href="http://jekyllthemes.org/">官网</a>
 
 Disqus是一家第三方社会化评论系统，主要为网站主提供评论托管服务，由Danniel Ha于2007年5月5日创办。
 

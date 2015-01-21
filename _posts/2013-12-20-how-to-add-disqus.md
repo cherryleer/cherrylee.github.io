@@ -13,18 +13,24 @@ WordPress、Blogger、Tumblr等第三方博客平台均提供了Disqus第三方�
 ## Step1 申请Disqus账号
 
 进入官网，点击Sign Up申请账号
+
 <p class="picture"><img alt="" src="/assets/img/2013-12-20/sign-up.jpg"/></p>
+
 输入用户名，注册邮箱以及密码，个人习惯用gmail邮箱进行注册。
+
 <p class="picture"><img alt="" src="/assets/img/2013-12-20/disqus-register.jpg"/></p>
 
 ## Step2 为你的网站注册Disqus
 
 官网首页，点击Add Disqus to Your Site
+
 <p class="picture"><img alt="" src="/assets/img/2013-12-20/add-disqus.jpg"/></p>
+
 输入
 - Site name 网站名称
 - Disqus URL（shortname）
 - Category类别
+
 <p class="picture"><img alt="" src="/assets/img/2013-12-20/registration.jpg"/></p>
 
 填写完毕后，点击Finish Registration
@@ -32,9 +38,13 @@ WordPress、Blogger、Tumblr等第三方博客平台均提供了Disqus第三方�
 ## Step3 将Disqus添加到你的网站
 
 选择你的博客平台，这里以最普通的Universal Code为例
+
 <p class="picture"><img alt="" src="/assets/img/2013-12-20/choose-platform.jpg"/></p>
+
 将生成的Disqus代码添加到你的网站
+
 <p class="picture"><img alt="" src="/assets/img/2013-12-20/js.jpg"/></p>
 
 ## Step4 完成了，看看效果
+
 <p class="picture"><img alt="" src="/assets/img/2013-12-20/test.jpg"/></p>

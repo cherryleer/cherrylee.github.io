@@ -5,6 +5,10 @@ category: program
 comments: true
 ---
 
+##JAVA_HOME
+
+* 作用：指向jdk安装目录，供其他软件找到安装好的jdk
+* 示例：<code>C:\Program Files\Java\jdk1.6.0_45</code>
 
 ##PATH
 
@@ -15,8 +19,3 @@ comments: true
 
 * 作用：设置Classpath的目的，在于告诉Java执行环境，在哪些目录下可以找到您所要执行的Java程序所需要的类或者包
 * 示例：<code>.;%JAVA_HOME%\lib\dt.jar;%JAVA_HOME%\lib\tools.jar</code>
-
-##JAVA_HOME
-
-* 作用：指向jdk安装目录，供其他软件找到安装好的jdk
-* 示例：<code>C:\Program Files\Java\jdk1.6.0_45</code>

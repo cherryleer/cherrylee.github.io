@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 同步
-category: translation concurrency
+title: Java同步
+category: translation program
 comments: true
 ---
 

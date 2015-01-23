@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 如何为repository添加CNAME
+title: 如何为Repository添加自定义域名。
 category: fun
-description：GitHub Pages站点的默认域名为*.github.io,当你拥有自定义域名时，可以通过添加CNAME文件，用自定义域名直接访问。
+description: 如果你想用自定义域名直接访问你的GitHub Pages站点，你必须创建并且提交一个包含自定义域名的CNAME文件到你的GitHub Pages repository。
 comments: true
 ---
 

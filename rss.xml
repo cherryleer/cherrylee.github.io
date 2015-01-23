@@ -11,18 +11,15 @@ layout: nil
     <atom:link href="cherrylee.name/rss.xml" rel="self" type="application/rss+xml" />
     <description>这里是Cherry Lee的个人博客，记录了Cherry Lee日常的学习、工作、生活。</description>
     <language>env</language>
-    <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
 
     {% for post in site.posts limit:10 %}
     <item>
       <title>{{ post.title }}</title>
       <link>cherrylee.name{{ post.url }}</link>
-
-      <author>cherrylee</author>
-      <guid>cherrylee.name{{ post.id }}</guid>
+      <author>Cherry Lee</author>
       <description>{{ post.description | xml_escape }}</description>
-        <pubDate>{{ post.date | date_to_string }}</pubDate>
+      <pubDate>{{ post.date | date_to_string }}</pubDate>
     </item>
     {% endfor %}
   </channel>

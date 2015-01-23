@@ -51,19 +51,14 @@
                             </div>
                             <!-- end item (class) -->
                         </xsl:for-each>
-                        <p name="decodeable" class="itembody"></p>
+
                     </div>
                     <!-- end items (ID) -->
-
                 </div>
-
             </body>
         </html>
     </xsl:template>
 
-    <xsl:output method="html"
-                encoding="UTF-8"
-                indent="no"/>
-
+    <xsl:output method="html" encoding="UTF-8" indent="no"/>
 
 </xsl:stylesheet>

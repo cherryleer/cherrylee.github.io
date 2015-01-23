@@ -1,7 +1,5 @@
 ---
-layout: post
-title: Archives
-category: Life
+layout: nil
 comments: true
 ---
 

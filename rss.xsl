@@ -52,6 +52,7 @@
                             <!-- end item (class) -->
                         </xsl:for-each>
 
+                        <p name="decodeable" class="itembody"></p>
                     </div>
                     <!-- end items (ID) -->
                 </div>

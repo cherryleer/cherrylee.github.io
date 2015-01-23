@@ -6,9 +6,9 @@ layout: nil
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>cherrylee</title>
-    <link>cherrylee.github.io</link>
-    <atom:link href="cherrylee.github.io/rss.xml" rel="self" type="application/rss+xml" />
-    <description>cherry's blog</description>
+    <link>cherrylee.name</link>
+    <atom:link href="cherrylee.name/rss.xml" rel="self" type="application/rss+xml" />
+    <description>Cherry's Blog</description>
     <language>env</language>
     <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</pubDate>
     <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %z" }}</lastBuildDate>
@@ -16,10 +16,10 @@ layout: nil
     {% for post in site.posts limit:10 %}
     <item>
       <title>{{ post.title }}</title>
-      <link>cherrylee.github.io{{ post.url }}</link>
+      <link>cherrylee.name{{ post.url }}</link>
       <pubDate>{{ post.date | date_to_string }}</pubDate>
       <author>cherrylee</author>
-      <guid>cherrylee.github.io{{ post.id }}</guid>
+      <guid>cherrylee.name{{ post.id }}</guid>
       <description>{{ post.content | xml_escape }}</description>
     </item>
     {% endfor %}

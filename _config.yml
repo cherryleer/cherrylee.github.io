@@ -1,17 +1,6 @@
-# Handling Reading
+highlighter: true
 safe: false
-exclude: ["README.md", ".git", ".idea"]
-encoding : utf-8
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-textile_ext:  "textile"
-
-
-# Serving
-detach:  false
-port:    80
-host:    http://cherrylee.name
-baseurl: "/" # does not include hostname
-url: http://cherrylee.name
+paginate: 10
 
 
 # site info

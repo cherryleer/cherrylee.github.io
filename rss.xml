@@ -16,7 +16,7 @@ layout: nil
     {% for post in site.posts limit:20 %}
     <item>
       <title>{{ post.title }}</title>
-      <link>cherrylee.name{{ post.url }}</link>
+      <link>http://cherrylee.name{{ post.url }}</link>
       <author>Cherry Lee</author>
       <description>{{ post.description | xml_escape }}</description>
       <pubDate>{{ post.date | date_to_string }}</pubDate>

@@ -3,14 +3,15 @@ if ($(window).width() <= 1280) {
   $('#sidebar').addClass('mobile')
 }
 
-// Variables
-    tag1       = $('.pl__all'),
-    tag2       = $('.translation'),
-    tag3       = $('.algorithm'),
-    tag4       = $('.program'),
+    tag1       = $('.pl__all');
+    tag2       = $('.translation');
+    tag3       = $('.algorithm');
+    tag4       = $('.program');
     tag5       = $('.nosql');
     tag6       = $('.fun');
     tag7       = $('.life');
+
+    tagCount = 7;
 
 var sidebar    = $('#sidebar'),
     container  = $('#post'),
@@ -25,7 +26,7 @@ var clickHandler = function(k) {
     window['tag'+k].delay(50).fadeIn(350);
   }
 };
-for (var i = 1; i <= 6; i++) {
+for (var i = 1; i <= tagCount; i++) {
   $('#js-label' + i).on('click', clickHandler(i));
 }
 

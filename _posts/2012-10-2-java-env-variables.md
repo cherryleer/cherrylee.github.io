@@ -2,6 +2,7 @@
 layout: post
 title: Java环境变量
 category: program
+description: java环境变量描述
 comments: true
 ---
 

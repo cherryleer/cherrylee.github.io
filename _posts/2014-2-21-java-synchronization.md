@@ -2,6 +2,7 @@
 layout: post
 title: Java同步
 category: translation program
+description: java同步相关
 comments: true
 ---
 

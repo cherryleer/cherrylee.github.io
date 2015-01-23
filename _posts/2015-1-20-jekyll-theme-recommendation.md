@@ -2,6 +2,7 @@
 layout: post
 title: jekyll theme推荐
 category: fun
+description: 好看的jekyll theme推荐。
 comments: true
 ---
 

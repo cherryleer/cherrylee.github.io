@@ -2,7 +2,7 @@
 layout: post
 title: Java环境变量
 category: program
-description: java环境变量描述
+description: Java依赖三个环境变量，分别为JAVA_HOME，PATH和CLASSPATH。
 comments: true
 ---
 

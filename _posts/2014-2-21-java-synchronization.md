@@ -2,7 +2,7 @@
 layout: post
 title: Java同步
 category: translation program
-description: java同步相关
+description: 线程间的通信主要是通过共享域和引用相同的对象。这种通信方式非常高效，不过可能会引发两种错误：线程干扰和内存一致性错误。防止这些错误发生的方法是同步。
 comments: true
 ---
 

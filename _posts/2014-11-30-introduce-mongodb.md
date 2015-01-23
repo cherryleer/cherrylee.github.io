@@ -2,6 +2,7 @@
 layout: post
 title: MongoDB介绍
 category: nosql
+description: 用reveal.js制作的MongoDB介绍。
 comments: true
 ---
 

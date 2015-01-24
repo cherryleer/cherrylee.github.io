@@ -3,23 +3,23 @@ layout: nil
 ---
 
 <?xml version="1.0"?>
-<!--<?xml-stylesheet type="text/xsl" href="/rss.xsl"?>-->
+<?xml-stylesheet type="text/xsl" href="/rss.xsl"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cherry's Blog</title>
-    <link>cherrylee.name</link>
+    <link>http://cherrylee.name</link>
     <atom:link href="cherrylee.name/rss.xml" rel="self" type="application/rss+xml" />
     <description>这里是Cherry Lee的个人博客，记录了Cherry Lee日常的学习、工作、生活。</description>
-    <language>env</language>
-    <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
+    <language>zh-CN</language>
+    <lastBuildDate>{{ site.time | date_to_rfc822 }}</lastBuildDate>
 
     {% for post in site.posts limit:20 %}
     <item>
       <title>{{ post.title }}</title>
       <link>http://cherrylee.name{{ post.url }}</link>
-      <author>Cherry Lee</author>
+      <author>cherryleer@gmail.com</author>
       <description>{{ post.description | xml_escape }}</description>
-      <pubDate>{{ post.date | date_to_string }}</pubDate>
+      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
     </item>
     {% endfor %}
   </channel>

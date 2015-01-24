@@ -4,12 +4,11 @@ if ($(window).width() <= 1280) {
 }
 
     tag1       = $('.pl__all');
-    tag2       = $('.translation');
-    tag3       = $('.algorithm');
+    tag2       = $('.fun');
+    tag3       = $('.life');
     tag4       = $('.program');
-    tag5       = $('.nosql');
-    tag6       = $('.fun');
-    tag7       = $('.life');
+    tag5       = $('.database');
+    tag6       = $('.translation');
 
     tagCount = 7;
 

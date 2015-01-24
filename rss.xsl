@@ -48,6 +48,7 @@
                                 <span style="font-size:13pt">
                                     <xsl:value-of select="description" disable-output-escaping="yes"/>
                                 </span>
+                                <br/><br/>
                             </div>
                             <!-- end item (class) -->
                         </xsl:for-each>

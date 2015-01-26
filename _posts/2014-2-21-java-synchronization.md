@@ -27,7 +27,6 @@ comments: true
 下面这个简单的Counter类：
 
 '''java
-<pre class="brush: java">
 class Counter {
     private int c = 0;
     public void increment() {

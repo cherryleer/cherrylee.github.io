@@ -20,7 +20,7 @@ layout: nil
       <author>cherryleer@gmail.com(Cherry Lee)</author>
       <guid>http://cherrylee.name{{ post.id }}</guid>
       <description>{{ post.description | xml_escape }}</description>
-      <pubDate>{{ post.date | date_to_rfc822 }}</pubDate>
+      <pubDate>{{ post.date | date_to_string }}</pubDate>
     </item>
     {% endfor %}
   </channel>

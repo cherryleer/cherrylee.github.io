@@ -6,10 +6,9 @@
         <html>
             <head>
                 <title>
-                    <xsl:value-of select="rss/channel/item"/>
+                    <xsl:value-of select="rss/channel/title"/>
                 </title>
                 <link rel="stylesheet" type="text/css" href="http://rss.feedsportal.com/xsl/test/rss_es.css"/>
-                <script type="text/javascript" src="http://rss.feedsportal.com/xsl/js/disableOutputEscaping.js"/>
             </head>
 
             <body onload="go_decoding()" style="font-family:helvetica,arial;">

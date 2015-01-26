@@ -26,7 +26,7 @@ comments: true
 
 下面这个简单的Counter类：
 
-'''java
+<pre class="brush: java">
 class Counter {
     private int c = 0;
     public void increment() {
@@ -39,7 +39,7 @@ class Counter {
         return c;
     }
 }
-'''java
+</pre>
 
 Counter类被设计成：每次调用increment()方法，c的值加1；每次调用decrement()方法，c的值减1。如果当同一个Counter对象被多个线程引用，线程间的干扰可能会使结果同我们预期的不一致。
 

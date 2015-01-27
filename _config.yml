@@ -1,4 +1,4 @@
-highlighter: true
+pygments: true
 safe: false
 paginate: 10
 

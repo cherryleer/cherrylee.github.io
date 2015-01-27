@@ -22,7 +22,7 @@ comments: true
 
 ## 创建XSL样式表
 
-仿照路透社的xsl文件，[下载地址](http://cherrylee.name/rss.xsl)
+仿照路透社的xsl文件，[下载地址](http://cherryleer.com/rss.xsl)
 
 ## 把XSL样式表链接到XML文档
 
@@ -34,6 +34,6 @@ comments: true
 
 ## 我的RSS
 
-目前我的博客[RSS](http://cherrylee.name/rss.xml)也是仿照了路透社的样式，喜欢的同学可以下载[xsl模板](http://cherrylee.name/rss.xsl)。
+目前我的博客[RSS](http://cherryleer.com/rss.xml)也是仿照了路透社的样式，喜欢的同学可以下载[xsl模板](http://cherryleer.com/rss.xsl)。
 
 <p class="picture"><img alt="" src="/assets/img/2015-1-24/cherry_rss.jpg"/></p>

@@ -6,5 +6,5 @@ description: 用reveal.js制作的MongoDB介绍。
 comments: true
 ---
 
-- <a href="http://cherrylee.name/mongodb-introduction">Presentation</a>
+- <a href="http://cherryleer.com/mongodb-introduction">Presentation</a>
 - <a href="http://pan.baidu.com/s/1gdGgnpL">Download</a>

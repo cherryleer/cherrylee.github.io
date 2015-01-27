@@ -20,4 +20,4 @@ reveal.js有非常广泛的功能，包括支持Markdown文本解析，PDF文件
 ## 栗子
 
 - <a href="http://lab.hakim.se/reveal-js/">官网</a>
-- <a href="http://cherrylee.name/mongodb-introduction">MongoDB Introduction</a>
+- <a href="http://cherryleer.com/mongodb-introduction">MongoDB Introduction</a>

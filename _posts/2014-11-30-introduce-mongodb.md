@@ -3,6 +3,7 @@ layout: post
 title: MongoDB介绍
 category: database
 description: 用reveal.js制作的MongoDB介绍。
+tags: [mongodb]
 comments: true
 ---
 

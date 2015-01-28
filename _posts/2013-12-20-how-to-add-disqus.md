@@ -3,6 +3,7 @@ layout: post
 title: 如何为博客添加Disqus评论功能
 category: fun
 description: Disqus是一家第三方社会化评论系统，主要为网站主提供评论托管服务，由Danniel Ha于2007年5月5日创办。
+tags: [disqus]
 comments: true
 ---
 

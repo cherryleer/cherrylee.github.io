@@ -3,6 +3,7 @@ layout: post
 title: 一致性hash
 category: program
 description: 本文将会从实际应用场景出发，介绍一致性哈希算法（ConsistentHashing）及其在分布式系统中的应用。
+tags: [hash,算法]
 comments: true
 ---
 

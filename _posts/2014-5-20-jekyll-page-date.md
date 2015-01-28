@@ -3,6 +3,7 @@ layout: post
 title: jekyll page-date记录
 category: fun
 description: jekyll page-date记录，减少查询时间。
+tags: [jekyll]
 comments: true
 ---
 

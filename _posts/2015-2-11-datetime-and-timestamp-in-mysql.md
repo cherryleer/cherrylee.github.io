@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MySQL DATETIME和TIMESTAMP比较
+title: MySQL中DATETIME和TIMESTAMP比较
 category: database
 description: MySQL DATETIME和TIMESTAMP比较
 tags: [database mysql]

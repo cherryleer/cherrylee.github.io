@@ -29,4 +29,4 @@ Resume:<a href="/assets/resume/liren.pdf" target="_blank">cn</a> <a href="/asset
 
 ##扫一扫</h2>
 
-<img alt="" src="/assets/img/weixin.jpg"/>
+<img alt="" src="http://cherryleer.com/assets/img/weixin.jpg"/>

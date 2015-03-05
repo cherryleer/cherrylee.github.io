@@ -39,3 +39,4 @@ comments: true
 **void wait(long timeout,int nanos)** 导致当前的线程等待，直到其他线程调用此对象的 notify() 方法或 notifyAll() 方法，或者其他某个线程中断当前线程，或者已超过某个实际时间量。
 
 **void finalize()** 当垃圾回收器确定不存在对该对象的更多引用时，由对象的垃圾回收器调用此方法。
+

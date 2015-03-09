@@ -7,9 +7,9 @@ tags: [jekyll]
 comments: true
 ---
 
-##官网
+## **官网**
 - <a href="http://jekyllthemes.org/">地址</a>
 
-##推荐主题
+## **推荐主题**
 - <a href="http://jekyllthemes.org/themes/type-theme/">地址</a>，<a href="http://zhwbqd.github.io/">示例(Jack's Blog)</a>
 - <a href="http://jekyllthemes.org/themes/architect/">地址</a>，<a href="http://walterinsh.github.io/">示例(WalterInSH)</a>

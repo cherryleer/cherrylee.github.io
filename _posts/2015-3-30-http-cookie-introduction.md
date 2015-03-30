@@ -2,12 +2,10 @@
 layout: post
 title: 读书笔记：HTTP中的Cookie
 category: program
-description: 
-tags: [ssh]
+description: Cookie在英文中是小甜饼的意思，这个词我们经常在浏览器中看到，但“小甜饼”怎么会跟浏览器扯上关系呢？在你浏览以前登录过的网站时可能会在网页中出现“你好，XX”，你会感觉很亲切，就像是吃了一个小甜饼一样。这其实是通过访问你客户端的一个文件来实现的，因此这个文件也就被称为“小甜饼”了。
+tags: [http session cookie]
 comments: true
 ---
-
-HTTP协议是一种无状态的协议，也就是说，当前的HTTP请求与以前的HTTP请求没有任何联系。显然，这种无状态的情形在某些时候将让用户觉得非常麻烦，比如在网上商城购物时，每购买一个商品都要重新输入一次用户名和密码，用户很快就会失去耐心，而且反复的输入也产生了更大的风险。所以，Web访问通过使用Cookie和Session解决这个问题。
 
 ## **Cookie来源**
 

@@ -4,7 +4,6 @@ title: MongoDB复制集成员
 category: translation back
 description: MongoDB复制集是一个提供了冗余性和高可用性的mongod进程的集合，各进程主要分为两种角色：主节点（Primary）和从节点（Secondary）。
 tags: [mongodb,replica]
-comments: true
 ---
 
 MongoDB复制集是一个提供了冗余性和高可用性的mongod进程的集合，各进程主要分为两种角色：主节点（Primary）和从节点（Secondary）。

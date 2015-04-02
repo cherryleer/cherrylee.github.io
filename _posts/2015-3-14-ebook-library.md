@@ -4,7 +4,6 @@ title: 电子书整理
 category: life
 description: 电子书整理，持续更新中。。。
 tags: [ebook 电子书]
-comments: true
 ---
 
 **先前收集的技术相关电子书，做个网络备份，持续更新中。。。**

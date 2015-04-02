@@ -4,7 +4,6 @@ title: Java同步
 category: translation back
 description: 线程间的通信主要是通过共享域和引用相同的对象。这种通信方式非常高效，不过可能会引发两种错误：线程干扰和内存一致性错误。防止这些错误发生的方法是同步。
 tags: [java,并发]
-comments: true
 ---
 
 [原文链接](http://docs.oracle.com/javase/tutorial/essential/concurrency/sync.html)，[译文链接](http://ifeve.com/synchronization/)，译者：蘑菇街-小宝，[Greenster](http://ifeve.com/author/29878739/)，[李任](http://ifeve.com/author/cherrylee/)  校对：丁一，郑旭东，[李任](http://ifeve.com/author/cherrylee/)

@@ -4,7 +4,6 @@ title: jekyll theme推荐
 category: front
 description: 好看的jekyll theme推荐。
 tags: [jekyll]
-comments: true
 ---
 
 ## **官网**

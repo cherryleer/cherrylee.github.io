@@ -4,7 +4,6 @@ title: MongoDB介绍
 category: back
 description: 用reveal.js制作的MongoDB介绍。
 tags: [mongodb]
-comments: true
 ---
 
 - <a href="http://cherryleer.com/mongodb-introduction">Presentation</a>

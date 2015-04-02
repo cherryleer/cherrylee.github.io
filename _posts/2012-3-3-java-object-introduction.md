@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Java Object介绍
-category: program
+category: back
 description: 在OOP中，自C++面试以来就已变得非常瞩目的一个问题就是，是否所有的类最终都继承自单一的基类。在Java中（事实上还包括除C++以外的所有OOP语言），答案是yes。
 tags: [java]
 comments: true

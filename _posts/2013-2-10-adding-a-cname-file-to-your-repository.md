@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 如何为Repository添加自定义域名
-category: fun
+category: front
 description: 如果你想用自定义域名直接访问你的GitHub Pages站点，你必须创建并且提交一个包含自定义域名的CNAME文件到你的GitHub Pages repository。
 tags: [github,cname]
 comments: true

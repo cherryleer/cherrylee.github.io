@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SSH登陆
-category: program
+category: network
 description: Secure Shell（SSH） 是一个允许两台电脑之间通过安全的连接进行数据交换的网络协议。加密保证了数据的保密性和完整性。SSH采用公钥加密技术来验证远程主机，以及(必要时)允许远程主机验证用户。
 tags: [ssh]
 comments: true

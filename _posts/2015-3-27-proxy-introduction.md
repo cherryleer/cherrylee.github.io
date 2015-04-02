@@ -1,9 +1,9 @@
 ---
 layout: post
 title: 读书笔记：正向、反向、透明代理
-category: program
+category: network
 description: 正向代理，反向代理和透明代理工作方式介绍。
-tags: [ssh]
+tags: [proxy cdn]
 comments: true
 ---
 

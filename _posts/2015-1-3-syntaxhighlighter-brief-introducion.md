@@ -1,7 +1,7 @@
 ---
 layout: post
 title: SyntaxHighlighter简介
-category: fun
+category: front
 description: SyntaxHighlighter是一款由javascript开发，功能强大且独立的代码语法高亮显示工具。
 tags: [javascript]
 comments: true

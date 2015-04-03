@@ -2,8 +2,8 @@
 layout: post
 title: 读书笔记：两阶段提交协议
 category: network
-description: 
-tags: [分布式 事务]
+description: 两阶段提交协议（Two-phase Commit, 2PC）是指，在计算机网络以及数据库领域内，为了使基于分布式系统架构下的所有节点在进行事务提交时，保持一致性而设计的一种协议。
+tags: [分布式 事务 两阶段提交协议]
 ---
 
 ## **事务**

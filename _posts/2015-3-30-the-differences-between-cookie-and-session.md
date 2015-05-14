@@ -14,11 +14,11 @@ HTTP协议是一种无状态的协议，也就是说，当前的HTTP请求与以
 
 ## **Cookie**
 
-[了解HTTP Cookie，戳这里](/program/2015/03/30/http-cookie-introduction.html)
+[了解HTTP Cookie，戳这里](/{% post.category %}/2015/03/30/http-cookie-introduction.html)
 
 ## **Session**
 
-[了解HTTP Session，戳这里](/program/2015/03/30/http-session-introduction.html)
+[了解HTTP Session，戳这里](/network/2015/03/30/http-session-introduction.html)
 
 ## **Cookie vs Session**
 

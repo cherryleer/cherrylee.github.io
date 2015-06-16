@@ -80,4 +80,34 @@ while(!initialized){
 doSomethingWithConfig();
 </pre>
 
-上述代码的描绘的场景十分常见。
+上述代码的描绘的场景十分常见。如果定义initialized变量时没有使用volatile修饰，就有可能因为指令重排序的优化，使得位于线程A中的最后一条语句“initalized = true”提前执行，这样在线程B中使用配置信息的代码就可能出现错误，而volatile关键字则可以避免此类情况的发生。
+
+指令重排序是并发编程中最容易让开发人员产生疑惑的地方，下面的这段代码将分析volatile关键字是如何禁止指令重排序优化的。代码清单时一段标准的DCL单例模式，可以观察加入volatile和未加入volatile关键字时所产生汇编代码的区别。
+
+<pre class="brush: java">
+public class Singleton{
+    private volatile static Singleton instance;
+    
+    public static Singleton getInstance(){
+        if(instance == null){
+            synchronized(Singleton.class){
+                if(instance == null){
+                    instance = new Singleton();
+                }
+            }
+        }
+        return instance;
+    }
+    
+    public static void main(String[] args){
+        Singleton.getInstance();
+    }
+}
+</pre>
+
+编译后，这段代码对instance变量赋值部分如下代码清单所示：
+
+<pre class="brush: java">
+</pre>
+
+to be continue...

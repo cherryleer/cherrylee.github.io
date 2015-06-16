@@ -2,9 +2,11 @@
 layout: post
 title: 计算机专业英语整理
 category: back
-description: 
+description: 计算机专业英语整理，持续更新中。。。
 tags: [english]
 ---
+
+**计算机专业英语整理，持续更新中**
 
 URI(Uniform Resource Identifier)：统一资源标示符
 

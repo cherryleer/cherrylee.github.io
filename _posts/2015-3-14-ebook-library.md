@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 电子书整理
-category: life
+category: backend
 description: 电子书整理，持续更新中。。。
 tags: [ebook 电子书]
 ---

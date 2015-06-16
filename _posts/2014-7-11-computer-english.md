@@ -1,0 +1,13 @@
+---
+layout: post
+title: 计算机专业英语整理
+category: backend
+description: 
+tags: [english]
+---
+
+URI(Uniform Resource Identifier)：统一资源标示符
+
+URL(Uniform Resource Locator)：统一资源定位符
+
+URN(Uniform Resource Name)：统一资源名称

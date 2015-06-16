@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 计算机专业英语整理
-category: backend
+category: back
 description: 
 tags: [english]
 ---

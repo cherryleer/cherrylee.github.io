@@ -36,3 +36,48 @@ tags: [设计 模式 策略 strategy pattern]
 
 * 客户端必须知道所有的策略类，并自行决定使用哪一个策略类。这就意味着客户端必须理解这些算法的区别，以便适时选择恰当的算法类。换言之，策略模式只适用于客户端知道所有的算法或行为的情况；
 * 策略模式造成很多的策略类，每个具体策略类都会产生一个新类。有时候可以通过把依赖于环境的状态保存到客户端里面，而将策略类设计成可共享的，这样策略类实例可以被不同客户端使用。换言之，可以使用享元模式来减少对象的数量。
+
+## **应用举例**
+
+### **上下文Duck类**
+
+<pre class="brush: java">
+public abstract class Duck｛
+    // 每只鸭子都会引用实现的FlyBehavior对象
+    FlyBehavior flyBehavior;
+
+    // 每只鸭子都会引用实现的QuackBehavior对象
+    QuackBehavior quackBehavior;
+    
+    public abstract void display();
+    
+    public void performFly(){
+        // 鸭子对象不亲自处理fly行为，而是委托给flyBehavior引用的对象 
+        flyBehavior.fly();
+    }
+    
+    public void performQuack(){
+        // 鸭子对象不亲自处理quack行为，而是委托给quackBehavior引用的对象 
+        quackBehavior.quack();
+    }
+    
+    public void swim(){
+        System.out.println("All ducks float, even decoys!");
+    }
+｝ </pre>
+
+### **具体的实现MallardDuck类**
+
+<pre class="brush: java">
+public class Duck｛
+    // 每只鸭子都会引用实现QuackBehavior对象
+    QuackBehavior quackBehavior;
+    
+    // 其他行为对象
+    。。。
+    
+    public void performQuack(){
+        // 鸭子对象不亲自处理quack行为，而是委托给quackBehavior引用的对象 
+        quackBehavior.quack();
+    }
+｝ </pre>

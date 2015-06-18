@@ -39,10 +39,53 @@ tags: [设计 模式 策略 strategy pattern]
 
 ## **应用举例**
 
+### **策略类FlyBehavior及其两个实现类（FlyWithWings和FlyNoWay）**
+
+<pre class="brush: java">
+// 所有飞行行为都必须实现的接口。
+public interface FlyBehavior{
+    pulic void fly();
+}
+</pre>
+
+<pre class="brush: java">
+// 飞行行为的实现，给会飞的鸭子用
+public class FlyWithWings implements FlyBehavior{
+    public void fly(){
+        System.out.println("I'm flying!");
+    )
+}
+</pre>
+
+<pre class="brush: java">
+// 飞行行为的实现，给不会飞的鸭子用
+public class FlyNoWay implements FlyBehavior{
+    public void fly(){
+        System.out.println("I can't fly!");
+    )
+}
+</pre>
+
+### **策略类QuackBehavior及其三个实现类（Quack、MuteQuack和Squeak）**
+
+<pre class="brush: java">
+public interface QuackBehavior{
+    public void quack();
+}
+</pre>
+
+<pre class="brush: java">
+public class Quack implements QuackBehavior{
+    public void quack();
+}
+</pre>
+
+
 ### **上下文Duck类**
 
 <pre class="brush: java">
 public abstract class Duck｛
+
     // 每只鸭子都会引用实现的FlyBehavior对象
     FlyBehavior flyBehavior;
 
@@ -64,20 +107,22 @@ public abstract class Duck｛
     public void swim(){
         System.out.println("All ducks float, even decoys!");
     }
-｝ </pre>
+｝ 
+</pre>
 
-### **具体的实现MallardDuck类**
+### **具体上下文实现MallardDuck类**
 
 <pre class="brush: java">
-public class Duck｛
-    // 每只鸭子都会引用实现QuackBehavior对象
-    QuackBehavior quackBehavior;
+public class MallardDuck extends Duck｛
     
-    // 其他行为对象
-    。。。
-    
-    public void performQuack(){
-        // 鸭子对象不亲自处理quack行为，而是委托给quackBehavior引用的对象 
-        quackBehavior.quack();
+    public MarllardDuck(){
+        // 在构造函数中指定具体的策略
+        quackBehavior = new Quack();
+        flyBehavior = new FlyWithWings();
     }
-｝ </pre>
+    
+    public void display(){
+        System.out.println("I'm a real mallard duck!");
+    }
+｝ 
+</pre>

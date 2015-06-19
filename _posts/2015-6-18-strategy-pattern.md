@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 设计模式之策略模式
+title: 读书笔记：设计模式之策略模式
 category: back
 description: 
 tags: [设计 模式 策略 strategy pattern]

@@ -25,7 +25,7 @@ tags: 翻译 后端
 
 下面这个简单的Counter类：
 
-<pre class="brush: java">
+{% highlight java %}
 class Counter {
     private int c = 0;
     public void increment() {
@@ -38,7 +38,7 @@ class Counter {
         return c;
     }
 }
-</pre>
+{% endhighlight %}
 
 Counter类被设计成：每次调用increment()方法，c的值加1；每次调用decrement()方法，c的值减1。如果当同一个Counter对象被多个线程引用，线程间的干扰可能会使结果同我们预期的不一致。
 
@@ -70,21 +70,21 @@ _线程B：结果写回到c,c现在是-1；_
 
 避免内存一致性错误的关键是理解happens-before关系。这种关系只是确保一个特定语句的写内存操作对另外一个特定的语句可见。要说明这个问题，请参考下面的例子。假设定义和初始化了一个简单int字段：
 
-<pre class="brush: java">
+{% highlight java %}
   int counter =0 ;
-</pre>
+{% endhighlight %}
 
 这个counter字段被A，B两个线程共享。假设线程A对counter执行递增:
 
-<pre class="brush: java;">
+{% highlight java %}
   counter++;
-</pre>
+{% endhighlight %}
 
 然后，很快的，线程B输出counter:
 
-<pre class="brush: java">
+{% highlight java %}
   System.out.println(counter);
-</pre>
+{% endhighlight %}
 
 如果这两个语句已经在同一个线程中被执行过，那么输出的值应该是“1”。不过如果这两个语句在不同的线程中分开执行，那输出的值很可能是“0”，因为无法保证线程A对counter的改动对线程B是可见的——除非我们在这两个语句之间已经建立了happens-before关系。
 
@@ -104,7 +104,7 @@ Java编程语言提供两种同步方式：同步方法和同步语句。相对�
 
 要让一个方法成为同步方法，只需要在方法声明中加上synchronized关键字：
 
-<pre class="brush: java">
+{% highlight java %}
 public class SynchronizedCounter {
     private int c = 0;
 
@@ -120,7 +120,7 @@ public class SynchronizedCounter {
         return c;
     }
 }
-</pre>
+{% endhighlight %}
 
 如果_count_是_SynchronizedCounter_类的实例，那么让这些方法成为同步方法有两个作用:
 
@@ -130,9 +130,9 @@ public class SynchronizedCounter {
 
 警告：当创建的对象会被多个线程共享时必须非常小心，对象的引用不要过早“暴露”出去。比如，假设你要维护一个叫_instances_的_List_，它包含类的每一个实例对象。你可能会尝试在构造方法中加这样一行：
 
-<pre class="brush: java">
+{% highlight java %}
   instances.add(this);
-</pre>
+{% endhighlight %}
 
 不过其他线程就能够在对象构造完成之前使用_instances_访问对象。
 
@@ -158,7 +158,7 @@ public class SynchronizedCounter {
 
 另外一种同步的方法是使用同步块。和同步方法不同，同步块必须指定所请求的是哪个对象的内部锁：
 
-<pre class="brush: java">
+{% highlight java %}
 public void addName(String name) {
     synchronized(this) {
         lastName = name;
@@ -166,12 +166,12 @@ public void addName(String name) {
     }
     nameList.add(name);
 }
-</pre>
+{% endhighlight %}
 
 在上面的例子中，addName方法需要使lastName和nameCount的更改保持同步，而且要避免同步调用该对象的其他方法。（在同步代码中调用其他方法会产生[Liveness](http://docs.oracle.com/javase/tutorial/essential/concurrency/liveness.html)一节所描述的问题。）如果不使用同步块，那么必须要定义一个额外的非同步方法，而这个方法仅仅是用来调用nameList.add。
 使用同步块对于更细粒度的同步很有帮助。例如类MsLunch有两个实例域c1和c2，他们并不会同时使用（译者注：即c1和c2是彼此无关的两个域），所有对这两个域的更新都需要同步，但是完全不需要防止c1的修改和c2的修改相互之间干扰（这样做只会产生不必要的阻塞而降低了并发性）。这种情况下不必使用同步方法，可以使用和this对象相关的锁。这里我们创建了两个“锁”对象（译者注：起到加锁效果的普通对象lock1和lock2）。
 
-<pre class="brush: java">
+{% highlight java %}
 public class MsLunch {
     private long c1 = 0;
     private long c2 = 0;
@@ -190,7 +190,7 @@ public class MsLunch {
         }
     }
 }
-</pre>
+{% endhighlight %}
 
 使用这种方法时要特别小心，需要十分确定c1和c2是彼此无关的域。
 

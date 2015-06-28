@@ -42,7 +42,7 @@ tags: 后端
 
 ### **实现气象站**
 
-<pre class="brush: java">
+{% highlight java %}
 public interface Subject{
     // 这两个方法都需要一个观察者作为变量，该观察者是用来注册或者删除的。
     public void registerObserver(Observer o);
@@ -51,25 +51,25 @@ public interface Subject{
     // 当主题状态改变时，这个状态会被调用，以通知所有的观察者。
     public void notifyObservers();
 }
-</pre>
+{% endhighlight %}
 
-<pre class="brush: java">
+{% highlight java %}
 public interface Observer{
     // 所有观察者都必须实现update()方法，以实现观察者接口。
     public void update(float temp, float humidity, float pressure);
 }
-</pre>
+{% endhighlight %}
 
-<pre class="brush: java">
+{% highlight java %}
 public interface DisplayElement{
     // 只包含一个方法display()，当布告板需要显示时，调用此方法。
     public void display();
 }
-</pre>
+{% endhighlight %}
 
 ### **在WeatherData中实现主题接口**
 
-<pre class="brush: java">
+{% highlight java %}
 public class WeatherData implements Subject{
     // Arraylist用来记录观察者，稍后在构造器中建立。
     private ArrayList observers;
@@ -111,11 +111,11 @@ public class WeatherData implements Subject{
         measurementsChanged();
     }
 }
-</pre>
+{% endhighlight %}
 
 ### **建立布告板**
 
-<pre class="brush: java">
+{% highlight java %}
 public class CurrentConditionsDisplay implements Observer, DisplayElement{
     private float temperature;
     private float humidity;
@@ -138,11 +138,11 @@ public class CurrentConditionsDisplay implements Observer, DisplayElement{
         System.out.println("Current conditions: " + temperature + "F degrees and " + humidity + "% humidity");
     }
 }
-</pre>
+{% endhighlight %}
 
 ### **启动气象站**
 
-<pre class="brush: java">
+{% highlight java %}
 public class WeatherStation{
     public static void main(String[] args){
         WeatherData weatherData = new WeatherData();
@@ -156,7 +156,7 @@ public class WeatherStation{
         weatherData.setMeasurements(70，55，20.4f);
     }
 }
-</pre>
+{% endhighlight %}
 
 ### **运行程序**
 

@@ -40,67 +40,67 @@ tags: 后端
 
 ### **1. 策略类FlyBehavior及其两个实现类（FlyWithWings和FlyNoWay）**
 
-<pre class="brush: java">
+{% highlight java %}
 // 所有飞行行为都必须实现的接口。
 public interface FlyBehavior{
     pulic void fly();
 }
-</pre>
+{% endhighlight %}
 
-<pre class="brush: java">
+{% highlight java %}
 // 飞行行为的实现，给会飞的鸭子用
 public class FlyWithWings implements FlyBehavior{
     public void fly(){
         System.out.println("I'm flying!");
     )
 }
-</pre>
+{% endhighlight %}
 
-<pre class="brush: java">
+{% highlight java %}
 // 飞行行为的实现，给不会飞的鸭子用
 public class FlyNoWay implements FlyBehavior{
     public void fly(){
         System.out.println("I can't fly!");
     )
 }
-</pre>
+{% endhighlight %}
 
 ### **2. 策略类QuackBehavior及其三个实现类（Quack、MuteQuack和Squeak）**
 
-<pre class="brush: java">
+{% highlight java %}
 public interface QuackBehavior{
     public void quack();
 }
-</pre>
+{% endhighlight %}
 
-<pre class="brush: java">
+{% highlight java %}
 public class Quack implements QuackBehavior{
     public void quack(){
         System.out.println("Quack");
     }
 }
-</pre>
+{% endhighlight %}
 
-<pre class="brush: java">
+{% highlight java %}
 public class MuteQuack implements QuackBehavior{
     public void quack(){
         System.out.println("Silence");
     }
 }
-</pre>
+{% endhighlight %}
 
-<pre class="brush: java">
+{% highlight java %}
 public class Squeak implements QuackBehavior{
     public void quack(){
         System.out.println("Squeak");
     }
 }
-</pre>
+{% endhighlight %}
 
 
 ### **3. 上下文Duck类**
 
-<pre class="brush: java">
+{% highlight java %}
 public abstract class Duck｛
 
     // 每只鸭子都会引用实现的FlyBehavior对象
@@ -125,11 +125,11 @@ public abstract class Duck｛
         System.out.println("All ducks float, even decoys!");
     }
 ｝ 
-</pre>
+{% endhighlight %}
 
 ### **4. 具体上下文实现MallardDuck类**
 
-<pre class="brush: java">
+{% highlight java %}
 public class MallardDuck extends Duck｛
     
     public MarllardDuck(){
@@ -142,11 +142,11 @@ public class MallardDuck extends Duck｛
         System.out.println("I'm a real mallard duck!");
     }
 ｝ 
-</pre>
+{% endhighlight %}
 
 ### **5. 测试类MiniDuckSimulator**
 
-<pre class="brush: java">
+{% highlight java %}
 public class MiniDuckSimulator{
     public static void main(String[] args){
         Duck mallard = new MallardDuck();
@@ -157,7 +157,7 @@ public class MiniDuckSimulator{
         mallard.performFly();
     }
 }
-</pre>
+{% endhighlight %}
 
 ### **6. 运行代码**
 
@@ -170,7 +170,7 @@ public class MiniDuckSimulator{
 
 ### **1. 在Duck类中，加入两个新方法**
 
-<pre class="brush: java">
+{% highlight java %}
 public void setFlyBehavior(FlyBehavior fb){
     flyBehavior = fb;
 }
@@ -178,11 +178,11 @@ public void setFlyBehavior(FlyBehavior fb){
 public void setQuackBehavior(QuackBehavior qb){
     quackBehavior = qb;
 }
-</pre>
+{% endhighlight %}
 
 ### **2. 制造一个新的鸭子类型：模型鸭（ModelDuck）**
 
-<pre class="brush: java">
+{% highlight java %}
 public class ModelDuck extends Duck{
     public ModelDuck(){
         // 模型是不会飞的
@@ -194,22 +194,22 @@ public class ModelDuck extends Duck{
         System.out.println("I'm a model duck");
     }
 }
-</pre>
+{% endhighlight %}
 
 ### **3. 建立一个新的FlyBehavior类型（FlyRockPowered）**
 
-<pre class="brush: java">
+{% highlight java %}
 public class FlyRockPowered implements FlyBehavior{
     // 一个新的飞行行为，用火箭飞行
     public void fly(){
         System.out.println("I'm flying with a rocket!");
     }
 }
-</pre>
+{% endhighlight %}
 
 ### **4. 改变测试类（MiniDuckSimulator），使用模型鸭，并使其用火箭飞行**
 
-<pre class="brush: java">
+{% highlight java %}
 public class MiniDuckSimulator{
     public static void main(String[] args){
         Duck model = new ModelDuck();
@@ -221,7 +221,7 @@ public class MiniDuckSimulator{
         model.perfomFly();        
     }
 }
-</pre>
+{% endhighlight %}
 
 ### **5. 运行代码**
 

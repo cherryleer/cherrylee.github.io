@@ -15,14 +15,14 @@ Happens-before原则是Java内存模型中定义的两项操作之间的偏序�
 
 这个定义不难理解，但它意味着什么呢，可以举个例子来说明，如下代码清单：
 
-<pre class="brush: java">
+{% highlight java %}
 // 以下操作在线程A中执行
 i ＝ 1;
 // 以下操作在线程B中执行
 j ＝ i;
 // 以下操作在线程C中执行
 i = 2;
-</pre>
+{% endhighlight %}
 
 假设线程A中的操作“i＝1”先行发生于线程B中的操作“j＝i”，那么可以确定在线程B的操作执行后，变量j的值一定等于1，得出这个结论的依据有两个：
 
@@ -52,7 +52,7 @@ Java语言无须任何同步手段保障就能成立的先行发生规则就只�
 
 以下示例将会演示如何使用这些规则去判定操作间是否具有顺序性，对于读写共享变量的操作来说，就是线程是否安全，读者还可以从下面这个例子感受一下“时间上的先后顺序”与“先行发生”之间有什么不同。演示例子如下代码清单：
 
-<pre class="brush: java">
+{% highlight java %}
 private int value = 0;
 
 public void setValue(int value){
@@ -62,7 +62,7 @@ public void setValue(int value){
 public int getValue(){
     return value;
 }
-</pre>
+{% endhighlight %}
 
 代码清单演示的是一组再普通不过的getter/setter方法，假设存在线程A和B，线程A先（时间上的先后）调用了setValue(1)，然后线程B调用了同一个对象的getValue()，那么线程B收到的返回值是什么？
 
@@ -85,11 +85,11 @@ public int getValue(){
 
 **一个操作“时间上的先发生”不代表这个操作会是“先行发生”，同样一个操作“先行发生”也不能推导出这个操作必定是“时间上的先发生”，一个典型的例子就是指令重排序。**
 
-<pre class="brush: java">
+{% highlight java %}
 // 以下操作在同一个线程中执行
 i ＝ 1;
 j ＝ 2;
-</pre>
+{% endhighlight %}
 
 如上代码清单所示，两条赋值语句在同一个线程中执行，根据次序规则，“int i ＝ 1”的操作先行发生于“int j ＝ 2”，但是“int j ＝ 2”的代码完成可能先被处理器执行，这并不影响先行发生规则的正确性，因为我们在这条线程之中没有办法感知到这点。
 

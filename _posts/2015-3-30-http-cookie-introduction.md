@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 读书笔记：HTTP中的Cookie
-category: network
 description: Cookie在英文中是小甜饼的意思，这个词我们经常在浏览器中看到，但“小甜饼”怎么会跟浏览器扯上关系呢？在你浏览以前登录过的网站时可能会在网页中出现“你好，XX”，你会感觉很亲切，就像是吃了一个小甜饼一样。这其实是通过访问你客户端的一个文件来实现的，因此这个文件也就被称为“小甜饼”了。
-tags: [http session cookie]
+tags: 网络
 ---
 
 ## **Cookie来源**

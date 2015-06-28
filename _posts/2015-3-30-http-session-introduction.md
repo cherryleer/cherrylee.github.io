@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 读书笔记：HTTP中的Session
-category: network
 description: Session从原始意思上讲是会话，如果放在Web访问中，是指用户通过浏览器进入某个网站时，从进入网站到浏览器关闭所经过的这段时间，也就是用户与网站一次“会话”的时间。我们在这里介绍的Session是利用其定义来强调的一种保持用户访问状态的机制。
-tags: [http session cookie]
+tags: 网络
 ---
 
 ## **Session来源**

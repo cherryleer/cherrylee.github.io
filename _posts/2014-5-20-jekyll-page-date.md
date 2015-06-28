@@ -1,9 +1,8 @@
 ---
 layout: post
 title: jekyll page-date记录
-category: front
 description: jekyll page-date记录，减少查询时间。
-tags: [jekyll]
+tags: 前端
 ---
 
 * %% - PERCENT

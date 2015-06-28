@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 用reveal.js制作幻灯片
-category: front
 description: reveal.js是一个用HTML来制作幻灯片的框架，使用非常简单，效果也很酷。
-tags: [javacsript]
+tags: 前端
 ---
 
 ## 介绍

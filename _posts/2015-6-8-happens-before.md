@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 读书笔记：happens-before原则
-category: back
 description: 如果Java内存模型中，所有的有序性都仅仅靠volite和synchronized来完成，那么有一些操作将会变的非常烦琐，但是我们在编写Java并发代码的时候并没有感觉到这一点，这是因为Java语言中有一个“happens-before”的原则。
-tags: [java memory model]
+tags: 后端
 ---
 
 如果Java内存模型中，所有的有序性都仅仅靠volite和synchronized来完成，那么有一些操作将会变的非常烦琐，但是我们在编写Java并发代码的时候并没有感觉到这一点，这是因为Java语言中有一个“happens-before”的原则。

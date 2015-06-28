@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 如何为博客添加第三方统计工具
-category: front
 description: 今天为博客添加了第三方的统计工具，用来记录博客的访问量。
-tags: [analysis]
+tags: 前端
 ---
 
 今天为博客添加了第三方的统计工具，用来记录博客的访问量。

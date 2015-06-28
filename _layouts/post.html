@@ -1,17 +1,19 @@
 ---
-layout: index
+layout: default
 ---
+<article class="post container">
+  <div class="post-meta">
+    <span class="post-meta-span"><a href="http://cherryleer.com">李任</a></span>
+    <span class="post-meta-span date">{{ page.date | date:"%Y %B %d" }}</span>
+    {% if page.tags.size > 0 %}
+    <span class="post-meta-span tag">{{ page.tags | join: ', ' }}</span>
+    {% endif %}
+  </div>
 
-<article id="post__content">
-    <h1 id="post__title">{{ page.title }}</h1>
-    <p>作者：<a href="http://cherryleer.com">李任</a>  时间：{{ page.date | date: "%Y-%m-%d"}}</p>
-    {{ content }}
-</article> <!-- end #post__content -->
+  <h1 class="post-title">{{ page.title }}</h1>
+  {{ content }}
+</article>
 
 {% include share.html %}
 
-<section class="comments">
-    {% include disqus.html %}
-</section>
-
-{% include footer.html %}
+{% include disqus.html %}

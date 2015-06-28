@@ -1,9 +1,8 @@
 ---
 layout: post
 title: jekyll theme推荐
-category: front
 description: 好看的jekyll theme推荐。
-tags: [jekyll]
+tags: 前端
 ---
 
 ## **官网**

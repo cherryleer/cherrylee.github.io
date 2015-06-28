@@ -1,11 +1,16 @@
-highlighter: pygments
-safe: false
-paginate: 10
-
-
 # site info
 url: cheryleer.com
 author: "cherryleer"
 title: Cherry's Blog
 description: 这是Cherryleer的个人博客。
 email: cherryleer@gmail.com
+github: cherrylee
+
+# Comment
+disqus_shortname: cherryleercom
+
+# Build settings
+markdown: kramdown
+sass:
+  style: compressed
+

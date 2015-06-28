@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 计算机专业英语整理
-category: back
 description: 计算机专业英语整理，持续更新中。。。
-tags: [english]
+tags: 后端
 ---
 
 **计算机专业英语整理，持续更新中**

@@ -1,9 +1,8 @@
 ---
 layout: post
 title: Java环境变量
-category: back
 description: Java依赖三个环境变量，分别为JAVA_HOME，PATH和CLASSPATH。
-tags: [java]
+tags: 后端
 ---
 
 ##JAVA_HOME

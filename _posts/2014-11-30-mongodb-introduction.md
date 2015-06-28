@@ -1,9 +1,8 @@
 ---
 layout: post
 title: MongoDB介绍
-category: back
 description: 用reveal.js制作的MongoDB介绍。
-tags: [mongodb]
+tags: 后端
 ---
 
 - <a href="http://cherryleer.com/mongodb-introduction">Presentation</a>

@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 读书笔记：设计模式之观察者模式
-category: back
-description: 
-tags: [设计 模式 观察者 observer pattern]
+description: 观察者模式，也叫做发布－订阅模式，定义了对象之间的一对多依赖，这样一来，当一个对象改变状态时，它的所有依赖着都会收到通知并自动更新。
+tags: 后端
 ---
 
 ## **概念**

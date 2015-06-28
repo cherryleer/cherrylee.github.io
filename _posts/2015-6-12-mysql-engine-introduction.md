@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 读书笔记：MySQL存储引擎简介
-category: back
-description: 
-tags: [mysql innodb]
+description: MySQl数据库区别于其他数据库的最重要的一个特点就是其插件式的表存储引擎。
+tags: 后端
 ---
 
 <p class="picture"><img alt="" src="/assets/img/2015-6-12/mysql-infrustructure.jpg"/></p>

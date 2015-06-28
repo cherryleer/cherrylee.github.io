@@ -1,9 +1,8 @@
 ---
 layout: post
 title: 读书笔记：设计模式之策略模式
-category: back
-description: 
-tags: [设计 模式 策略 strategy pattern]
+description: 策略模式定义了一些列算法，并把这些算法分别封装起来，让它们之间可以相互替换，此模式让算法的变化独立于使用算法的客户。
+tags: 后端
 ---
 
 ## **概念**

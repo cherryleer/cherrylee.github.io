@@ -1,8 +1,5 @@
-cherrylee.github.io/_site/*
-C:/Users/cherry.li/Documents/GitHub/cherrylee.github.io/_site/*
 _site/*
 .idea/*
-.sass-cache/*
 
 .gitignore
-cherrylee.github.io.iml
+.iml
